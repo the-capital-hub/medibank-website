@@ -4,7 +4,7 @@ import Header from "@/components/Genric/Header/Header";
 import Footer from "@/components/Genric/Footer/Footer";
 
 export const metadata = {
-  title: "MediLog",
+  title: "Medibank",
   description: "Centralised EHR ",
 };
 

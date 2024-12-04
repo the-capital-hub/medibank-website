@@ -17,7 +17,7 @@ const ContactCard = () => {
             <p className='text-[20px]'>4th Floor, Bizness Square</p>
             <p className='text-[20px]'>Hitech City Rd, HITEC City</p>
             <p className='text-[20px]'>Hyderabad, Telangana 500081</p>
-            <a href="mailto:contact@medilog.in" className="text-[20px] text-blue-600">
+            <a href="mailto:contact@medibank.in" className="text-[20px] text-blue-600">
               contact@medibank.in
             </a>
           </div>

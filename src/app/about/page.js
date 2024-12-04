@@ -116,8 +116,8 @@ export default function page() {
 										<Image
 											src={item.imgurl}
 											className="rounded-[10px]"
-											width="200"
-											height="200"
+											width="400"
+											height="400"
 											alt="profile-picture"
 										/>
 									</div>

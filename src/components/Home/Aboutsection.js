@@ -87,7 +87,7 @@ export default function ChemistryAtWorkSection() {
 						<Image
 							src="/images/Groupabout.png" // Replace with your image path
 							className="rounded-lg"
-							alt="About Medilog section"
+							alt="About MediBank section"
 							width={640}
 							height={480}
 						/>
