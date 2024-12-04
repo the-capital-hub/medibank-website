@@ -52,7 +52,7 @@ export default function ContactUs() {
 
   return (
     <div className="flex flex-col items-center justify-center py-8 w-full">
-      <h1 className="text-center text-[48px] font-bold mb-8">Get in Touch!</h1>
+      <h1 className="text-center text-[28px] md:text-[48px] font-bold mb-8">Get in Touch!</h1>
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -100,7 +100,7 @@ export default function ContactUs() {
             type="submit"
             value="Submit"
             disabled={!isFormValid}
-            className={`w-[20%] h-10 px-4 text-center text-white font-semibold rounded-md ${
+            className={`md:w-[20%] h-10 px-4 text-center text-white font-semibold rounded-md ${
               isFormValid
                 ? "bg-purple-600 hover:bg-purple-700 cursor-pointer"
                 : "bg-gray-400 cursor-not-allowed"

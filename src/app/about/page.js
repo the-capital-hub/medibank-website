@@ -87,13 +87,14 @@ export default function page() {
 					India has witnessed remarkable digital advancements across various
 					sectors, yet health records remain largely confined to pen, paper &
 					folders, making them difficult to maintain and track. <br /> <br />
-					To bridge this gap and align with the nation&apos;s digitisation trend,
-					Medibank was created as India&apos;s first patient-centric Electronic
-					Health Record platform. By digitising healthcare records and utilising
-					AI to generate health analysis charts of those records, Medibank aims
-					to simplify access, streamline communication, and improve the overall
-					experience for both patients and doctors, ensuring a more efficient
-					and modern approach to healthcare management. <br /> <br />
+					To bridge this gap and align with the nation&apos;s digitisation
+					trend, Medibank was created as India&apos;s first patient-centric
+					Electronic Health Record platform. By digitising healthcare records
+					and utilising AI to generate health analysis charts of those records,
+					Medibank aims to simplify access, streamline communication, and
+					improve the overall experience for both patients and doctors, ensuring
+					a more efficient and modern approach to healthcare management. <br />{" "}
+					<br />
 					We are working towards a healthcare system in India, where citizens
 					have the option to visit any healthcare provider or institution in any
 					part of the country without the need of carrying physical medical
@@ -102,17 +103,49 @@ export default function page() {
 			</div>
 
 			<div className="bg-white my-16 h-screen z-[-1] sticky md:top-[0px] top-[0]">
-				<h2 className="container text-[28px] font-bold pt-24">Founding Team</h2>
-				<div className="founding-team py-16 mx-16 rounded-[30px] bg-[#F6F5FF]">
-					<div className="flex justify-around items-center flex-col md:flex-row w-full flex-wrap">
+				<h2 className="container text-center text-[28px] md:text-[30px] font-bold pt-24">
+					Founding Team
+				</h2>
+				<div className="founding-team h-max py-16 mx-16 rounded-[30px] bg-[#F6F5FF]">
+					<div className="flex justify-center gap-5 items-center flex-col md:flex-row w-full h-max flex-wrap">
 						{founderData.map((item, index) => (
+							// <div
+							// 	key={index}
+							// 	className="group min-w-[200px] md:max-w-[230px] md:w-1/5 md:mx-1 mb-2 md:my-4 bg-white rounded-[10px]"
+							// >
+							// 	<div className="relative h-56 sog_animation group-hover:rotate-y-180">
+							// 		<div className="absolute top-0 bottom-0 w-full h-full backface_hidden rounded-[10px]">
+							// 			{" "}
+							// 			<Image
+							// 				src={item.imgurl}
+							// 				className="rounded-[10px]"
+							// 				width="400"
+							// 				height="400"
+							// 				alt="profile-picture"
+							// 			/>
+							// 		</div>
+							// 		<div className="absolute rounded-[10px] top-0 bottom-0 w-full h-full backface_hidden rotate-y-180 bg-gradient-to-r from-purple-200 via-purple-100 to-blue-200 border text-black">
+							// 			{" "}
+							// 			<p className="p-4 text-[13px] leading-[16px]">
+							// 				{item.Details}
+							// 			</p>
+							// 		</div>
+							// 	</div>
+
+							// 	<div className="text-center md:text-left font-bold md:pt-2">
+							// 		{item.Name}
+							// 	</div>
+							// 	<div className="text-center md:text-left text-[12px]">
+							// 		{item.Designation}
+							// 	</div>
+							// </div>
+
 							<div
 								key={index}
-								className="group w-full md:w-1/5 md:mx-1 mb-2 md:my-4 bg-white rounded-[10px]"
+								className="relative group min-w-[200px] md:max-w-[230px] md:w-1/5 md:mx-1 mb-2 md:my-4 bg-white rounded-[10px] perspective"
 							>
-								<div className="relative h-56 sog_animation group-hover:rotate-y-180">
+								<div className="relative h-56 sog_animation group-hover:rotate-y-180 transition-transform duration-300">
 									<div className="absolute top-0 bottom-0 w-full h-full backface_hidden rounded-[10px]">
-										{" "}
 										<Image
 											src={item.imgurl}
 											className="rounded-[10px]"
@@ -122,15 +155,18 @@ export default function page() {
 										/>
 									</div>
 									<div className="absolute rounded-[10px] top-0 bottom-0 w-full h-full backface_hidden rotate-y-180 bg-gradient-to-r from-purple-200 via-purple-100 to-blue-200 border text-black">
-										{" "}
-										{/* Back card */}
 										<p className="p-4 text-[13px] leading-[16px]">
 											{item.Details}
 										</p>
 									</div>
 								</div>
-								<div className="text-left font-bold pt-2">{item.Name}</div>
-								<div className="text-left text-[12px]">{item.Designation}</div>
+
+								<div className="text-center md:text-left font-bold md:pt-2">
+									{item.Name}
+								</div>
+								<div className="text-center md:text-left text-[12px]">
+									{item.Designation}
+								</div>
 							</div>
 						))}
 					</div>
@@ -139,7 +175,7 @@ export default function page() {
 
 			<div className="bg-white h-screen z-[-1] sticky md:top-[0px] top-[0]">
 				<div className="w-4/5 container py-16">
-					<div className="text-center my-8 lg:my-6 text-[38px] font-bold text-black">
+					<div className="text-center my-8 lg:my-6 text-[28px] md:text-[38px] font-bold text-black">
 						Advisory Panel
 					</div>
 					<div className="flex justify-around items-center flex-col md:flex-row w-full flex-wrap h-max">
@@ -168,7 +204,9 @@ export default function page() {
 											</p>
 										</div>
 									</div>
-									<div className="text-left font-bold pt-2 lg:pt-0">{item.Name}</div>
+									<div className="text-left font-bold pt-2 lg:pt-0">
+										{item.Name}
+									</div>
 									<div className="text-left text-[12px]">
 										{item.Designation}
 									</div>
@@ -180,7 +218,7 @@ export default function page() {
 			</div>
 
 			<div id="about3" className="bg-white">
-				<div className="text-center  text-[48px] font-bold">Careers</div>
+				<div className="text-center text-[28px]  md:text-[48px] font-bold">Careers</div>
 
 				<div className="w-4/5 container py-10 mt-6 bg-red-50">
 					<div className="text-center">

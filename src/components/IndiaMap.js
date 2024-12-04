@@ -54,6 +54,32 @@ const getHeatMapData = () => [
 			},
 		},
 	},
+	{
+		id: "JK",
+		state: "Jammu & Kashmir",
+		value: {
+			Doctors: {
+				"General Physician": 5,
+				Dentist: 6,
+				Cardiologist: 7,
+				Dermatologist: 8,
+			},
+			Labs: {
+				Pathology: 9,
+				Radiology: 10,
+				Biochemistry: 12,
+				Microbiology: 11,
+				Hematology: 13,
+			},
+			Hospitals: {
+				Government: 14,
+				Private: 15,
+				Multispecialty: 5,
+				"Children's": 7,
+				Orthopedic: 8,
+			},
+		},
+	},
 ];
 
 const App = () => {
@@ -161,7 +187,7 @@ const App = () => {
 				</div>
 
 				{/* Cards Section */}
-				<div className="flex flex-col gap-8">
+				<div className="flex flex-col md:flex-row gap-4 md:gap-8">
 					<div className="md:w-4/5 w-full md:mb-8 mx-auto">
 						<div className="grid grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-2 lg:gap-6">
 							{Object.entries(subcategories)
@@ -174,7 +200,7 @@ const App = () => {
 								.map(({ category, index }) => (
 									<div
 										key={`${category}-${index}`}
-										className="bg-white shadow-md rounded-lg p-4 flex items-center"
+										className="bg-white shadow-md rounded-lg p-4 flex items-center gap-2"
 									>
 										<div className="w-30 h-30 rounded-full flex items-center justify-center ">
 											<Image
@@ -221,7 +247,7 @@ const App = () => {
 							>
 								&lt;
 							</button>
-							<div className="flex space-x-2 w-full overflow-x-auto scrollbar-">
+							<div className="flex space-x-2 w-max overflow-x-auto scrollbar-">
 								{Array.from({ length: totalPages }, (_, i) => i + 1).map(
 									(page) => (
 										<button
