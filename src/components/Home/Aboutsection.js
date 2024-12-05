@@ -60,9 +60,9 @@ export default function ChemistryAtWorkSection() {
 						resulting in potential health risks. Introducing MediBank,{" "}
 						<span className="text-[#6D4AFF]">
 							India&apos;s first cloud based Electronic Health Records (EHR) platform
-						</span>{" "}
+						
 						with centralised digital health records accessible by both patients
-						and doctors. MediBank offers a comprehensive, secure, and
+						and doctors.</span>{" "} MediBank offers a comprehensive, secure, and
 						user-friendly Electronic Health Record (EHR) platform which
 						eliminates the hassle of paper prescriptions and the risk of lost
 						information. By centralizing & digitising health records and
