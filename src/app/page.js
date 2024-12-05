@@ -32,7 +32,7 @@ export default function Home() {
 				initial="hidden"
 				animate="visible"
 			>
-				<div className="container flex flex-col md:flex-row items-center px-4 md:px-8 lg:mb-[125px]">
+				<div className="container flex flex-col md:flex-row items-center px-4 md:px-8">
 					{/* Text Section */}
 					<motion.div
 						className="md:w-1/2 w-full text-center md:text-left mb-8 md:mb-0"
@@ -49,24 +49,98 @@ export default function Home() {
 							</span>
 							Records
 						</h1>
+						{/* Image Section hidden on mobile */}
 						<motion.div
-							className="text-sm font-medium text-gray-600 mb-4"
+							className="text-sm font-medium text-gray-600 mb-4 hidden md:block"
 							variants={fadeInImage}
 						>
-							<div className='flex gap-10 justify-center'>
-								<Image className='blur-[2px]' src='/images/QR.png' width='100' height='100' alt="qr" />
-								<Image className='blur-[2px]' src='/images/QR.png' width='100' height='100' alt="qr" />
+							<div className="flex gap-10 justify-left">
+								<Image
+									className="blur-[2px]"
+									src="/images/QR.png"
+									width="100"
+									height="100"
+									alt="qr"
+								/>
+								<Image
+									className="blur-[2px]"
+									src="/images/QR.png"
+									width="100"
+									height="100"
+									alt="qr"
+								/>
 							</div>
-							<div className='flex gap-10 justify-center'>
-								<Image src='/images/playstore.png' className='h-auto' width='100' height='100' alt="qr" />
-								<Image src='/images/appstore.png' width='100' height='50' alt="qr" />
+							<div className="flex gap-10 justify-left">
+								<Image
+									src="/images/playstore.png"
+									className="h-auto"
+									width="100"
+									height="100"
+									alt="qr"
+								/>
+								<Image
+									src="/images/appstore.png"
+									width="100"
+									height="50"
+									alt="qr"
+								/>
 							</div>
 						</motion.div>
 					</motion.div>
-
-					{/* Image Section */}
+					<div className="flex flex-col-reverse md:flex-col ">
+						{/* Image Section, hidden on desktop */}
+						<motion.div
+							className="text-sm font-medium text-gray-600 mb-4 block md:hidden"
+							variants={fadeInImage}
+						>
+							<div className="flex gap-10 justify-center">
+								<Image
+									className="blur-[2px]"
+									src="/images/QR.png"
+									width="100"
+									height="100"
+									alt="qr"
+								/>
+								<Image
+									className="blur-[2px]"
+									src="/images/QR.png"
+									width="100"
+									height="100"
+									alt="qr"
+								/>
+							</div>
+							<div className="flex gap-10 justify-center">
+								<Image
+									src="/images/playstore.png"
+									className="h-auto"
+									width="100"
+									height="100"
+									alt="qr"
+								/>
+								<Image
+									src="/images/appstore.png"
+									width="100"
+									height="50"
+									alt="qr"
+								/>
+							</div>
+						</motion.div>
+						<motion.div
+							className="md:w-1/2 w-full flex justify-center md:justify-end md:hidden"
+							variants={fadeInImage}
+						>
+							<Image
+								src="/images/Doctors.png"
+								alt="Doctors Illustration"
+								width={400}
+								height={250}
+								className="w-full max-w-sm"
+							/>
+						</motion.div>
+					</div>
+					{/* desktop image */}
 					<motion.div
-						className="md:w-1/2 w-full flex justify-center md:justify-end"
+						className="md:w-1/2 w-full md:flex justify-center md:justify-end hidden lg:py-16"
 						variants={fadeInImage}
 					>
 						<Image
@@ -81,25 +155,24 @@ export default function Home() {
 
 				{/* Buttons */}
 				<motion.div
-			className="hidden md:flex flex-wrap justify-center md:justify-around gap-4 py-6 bg-[#160073] text-white px-4"
-			variants={fadeInButton}
-			>
-			{[
-				{ src: "/images/hero1.png", text: "Digital Health Records" },
-				{ src: "/images/hero2.png", text: "Online Consultation" },
-				{ src: "/images/hero3.png", text: "Emergency Record Access" },
-				{ src: "/images/ai.png", text: "AI Health Analysis" },
-			].map((item, index) => (
-				<div
-				key={index}
-				className="flex items-center gap-2 text-sm md:text-base"
+					className="hidden md:flex flex-wrap justify-center md:justify-around gap-4 py-6 bg-[#160073] text-white px-4"
+					variants={fadeInButton}
 				>
-				<Image src={item.src} alt={item.text} width={50} height={50} />
-				<span>{item.text}</span>
-				</div>
-			))}
-			</motion.div>
-
+					{[
+						{ src: "/images/hero1.png", text: "Digital Health Records" },
+						{ src: "/images/hero2.png", text: "Online Consultation" },
+						{ src: "/images/hero3.png", text: "Emergency Record Access" },
+						{ src: "/images/ai.png", text: "AI Health Analysis" },
+					].map((item, index) => (
+						<div
+							key={index}
+							className="flex items-center gap-2 text-sm md:text-base"
+						>
+							<Image src={item.src} alt={item.text} width={50} height={50} />
+							<span>{item.text}</span>
+						</div>
+					))}
+				</motion.div>
 			</motion.div>
 
 			{/* About Section */}
