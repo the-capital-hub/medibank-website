@@ -70,7 +70,7 @@ export default function Home() {
 						variants={fadeInImage}
 					>
 						<Image
-							src="/images/Doctors.png"
+							src="/images/doctors2.png"
 							alt="Doctors Illustration"
 							width={400}
 							height={250}
