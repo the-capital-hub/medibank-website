@@ -50,9 +50,9 @@ export default function Header() {
           <a href="/">
             <Image
               src="/images/ml_logo.png"
-              className="m-auto w-[80px] my-2"
-              width="223"
-              height="247"
+              className="m-auto"
+              width="100"
+              height="347"
               alt="header logo"
             />
           </a>

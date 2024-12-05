@@ -69,6 +69,26 @@ export default function Footer() {
 									loading="lazy"
 								/>
 							</Link>
+							<Link href="https://instagram.com/">
+								<Image
+									src="/images/insta.png"
+									alt="Insta Logo"
+									className="text-center"
+									width="30"
+									height="30"
+									loading="lazy"
+								/>
+							</Link>
+							<Link href="https://x.com/">
+								<Image
+									src="/images/x.png"
+									alt="X Logo"
+									className="text-center"
+									width="30"
+									height="30"
+									loading="lazy"
+								/>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -138,34 +158,36 @@ export default function Footer() {
 					{/* Information Section */}
 					<div className="w-full md:w-1/4">
 						<h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
-						<ul className="sm:space-y-2 p-0 m-0 list-none flex flex-wrap items-center gap-4 ">
-							<li>
-								<Link href="#" className="text-white hover:text-[#5C4AFF]">
-									Health Guides
-								</Link>
+						<ul className="p-0 m-0 list-none flex flex-col md:flex-col ">
+							<li className="m-0 p-0">
+							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+								Health Guides
+							</Link>
 							</li>
-							<li>
-								<Link href="#" className="text-white hover:text-[#5C4AFF]">
-									Privacy Policy
-								</Link>
+							<li className="m-0 p-0">
+							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+								Privacy Policy
+							</Link>
 							</li>
-							<li>
-								<Link href="#" className="text-white hover:text-[#5C4AFF]">
-									Contact Us
-								</Link>
+							<li className="m-0 p-0">
+							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+								Contact Us
+							</Link>
 							</li>
-							<li>
-								<Link href="#" className="text-white hover:text-[#5C4AFF]">
-									About Us
-								</Link>
+							<li className="m-0 p-0">
+							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+								About Us
+							</Link>
 							</li>
-							<li>
-								<Link href="#" className="text-white hover:text-[#5C4AFF]">
-									Blog
-								</Link>
+							<li className="m-0 p-0">
+							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+								Blog
+							</Link>
 							</li>
 						</ul>
 					</div>
+
+
 
 					{/* Contact Section */}
 					<div className="w-full md:w-1/4">

@@ -53,13 +53,14 @@ export default function Home() {
 							className="text-sm font-medium text-gray-600 mb-4"
 							variants={fadeInImage}
 						>
-							<Image
-								src="/images/qrHero.png"
-								alt="QR Illustration"
-								width={200}
-								height={150}
-								className="blur-sm mx-auto md:mx-0 mt-4"
-							/>
+							<div className='flex gap-10'>
+								<Image className='blur-[2px]' src='/images/QR.png' width='100' height='100' alt="qr" />
+								<Image className='blur-[2px]' src='/images/QR.png' width='100' height='100' alt="qr" />
+							</div>
+							<div className='flex gap-10'>
+								<Image src='/images/playstore.png' className='h-auto' width='100' height='100' alt="qr" />
+								<Image src='/images/appstore.png' width='100' height='50' alt="qr" />
+							</div>
 						</motion.div>
 					</motion.div>
 
@@ -80,24 +81,25 @@ export default function Home() {
 
 				{/* Buttons */}
 				<motion.div
-					className="flex flex-wrap justify-center md:justify-around gap-4 py-6 bg-[#160073] text-white px-4"
-					variants={fadeInButton}
+			className="hidden md:flex flex-wrap justify-center md:justify-around gap-4 py-6 bg-[#160073] text-white px-4"
+			variants={fadeInButton}
+			>
+			{[
+				{ src: "/images/hero1.png", text: "Digital Health Records" },
+				{ src: "/images/hero2.png", text: "Online Consultation" },
+				{ src: "/images/hero3.png", text: "Emergency Record Access" },
+				{ src: "/images/ai.png", text: "AI Health Analysis" },
+			].map((item, index) => (
+				<div
+				key={index}
+				className="flex items-center gap-2 text-sm md:text-base"
 				>
-					{[
-						{ src: "/images/hero1.png", text: "Digital Health Records" },
-						{ src: "/images/hero2.png", text: "Online Consultation" },
-						{ src: "/images/hero3.png", text: "Emergency Record Access" },
-						{ src: "/images/hero4.png", text: "AI Health Analysis" },
-					].map((item, index) => (
-						<div
-							key={index}
-							className="flex items-center gap-2 text-sm md:text-base"
-						>
-							<Image src={item.src} alt={item.text} width={50} height={50} />
-							<span>{item.text}</span>
-						</div>
-					))}
-				</motion.div>
+				<Image src={item.src} alt={item.text} width={50} height={50} />
+				<span>{item.text}</span>
+				</div>
+			))}
+			</motion.div>
+
 			</motion.div>
 
 			{/* About Section */}

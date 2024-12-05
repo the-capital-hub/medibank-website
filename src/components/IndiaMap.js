@@ -54,6 +54,35 @@ const getHeatMapData = () => [
 			},
 		},
 	},
+	{
+		id: "JK",
+		state: "Jammu & Kashmir",
+		value: {
+			Doctors: {
+				"General Physician": 5,
+				Dentist: 6,
+				"ENT Specialist": 4,
+				Ophthalmologist: 5,
+				Gynaecologist: 6,
+				Cardiologist: 7,
+				Dermatologist: 8,
+			},
+			Labs: {
+				Pathology: 9,
+				Radiology: 10,
+				Biochemistry: 12,
+				Microbiology: 11,
+				Hematology: 13,
+			},
+			Hospitals: {
+				Government: 14,
+				Private: 15,
+				Multispecialty: 5,
+				"Children's": 7,
+				Orthopedic: 8,
+			},
+		},
+	},
 ];
 
 const App = () => {
@@ -61,7 +90,11 @@ const App = () => {
 	const [activeTab, setActiveTab] = useState("Doctors");
 	const [activeState, setActiveState] = useState(data[0]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [showAllSubcategories, setShowAllSubcategories] = useState(false); // New State
+	const [showAllSubcategories, setShowAllSubcategories] = useState({
+		Doctors: false,
+		Labs: false,
+		Hospitals: false,
+	}); // Modified to separate state for each tab
 
 	const cardsPerPage = 12;
 	const subcategories = activeState?.value[activeTab] || {};
@@ -79,7 +112,11 @@ const App = () => {
 		if (current) {
 			setActiveState(current);
 			setCurrentPage(1);
-			setShowAllSubcategories(false);
+			setShowAllSubcategories({
+				Doctors: false,
+				Labs: false,
+				Hospitals: false,
+			}); // Reset subcategories state for all tabs
 		}
 	};
 
@@ -91,8 +128,11 @@ const App = () => {
 		if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
 	};
 
-	const toggleShowAllSubcategories = () => {
-		setShowAllSubcategories((prev) => !prev);
+	const toggleShowAllSubcategories = (tab) => {
+		setShowAllSubcategories((prev) => ({
+			...prev,
+			[tab]: !prev[tab], // Toggle only the selected tab
+		}));
 	};
 
 	const getIconForCategory = (tab) => {
@@ -138,7 +178,10 @@ const App = () => {
 				{/* Subcategories Section */}
 				<div className="flex flex-wrap sm:flex-nowrap text-center gap-4 bg-gray-100 py-3 rounded-md mb-6 shadow relative">
 					{subcategoryEntries
-						.slice(0, showAllSubcategories ? subcategoryEntries.length : 3)
+						.slice(
+							0,
+							showAllSubcategories[activeTab] ? subcategoryEntries.length : 3
+						)
 						.map(([category, count], index) => (
 							<p
 								key={index}
@@ -152,16 +195,16 @@ const App = () => {
 						))}
 					{subcategoryEntries.length > 4 && (
 						<button
-							className=" text-blue-500 font-semibold text-sm"
-							onClick={toggleShowAllSubcategories}
+							className="text-blue-500 font-semibold text-sm"
+							onClick={() => toggleShowAllSubcategories(activeTab)}
 						>
-							{showAllSubcategories ? "Show Less" : "See More"}
+							{showAllSubcategories[activeTab] ? "Show Less" : "See More"}
 						</button>
 					)}
 				</div>
 
 				{/* Cards Section */}
-				<div className="flex flex-col gap-8">
+				<div className="flex flex-col-reverse md:flex-row gap-4 md:gap-8">
 					<div className="md:w-4/5 w-full md:mb-8 mx-auto">
 						<div className="grid grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-2 lg:gap-6">
 							{Object.entries(subcategories)
@@ -174,7 +217,7 @@ const App = () => {
 								.map(({ category, index }) => (
 									<div
 										key={`${category}-${index}`}
-										className="bg-white shadow-md rounded-lg p-4 flex items-center"
+										className="bg-white shadow-md rounded-lg p-4 flex items-center gap-2"
 									>
 										<div className="w-30 h-30 rounded-full flex items-center justify-center ">
 											<Image
@@ -221,7 +264,7 @@ const App = () => {
 							>
 								&lt;
 							</button>
-							<div className="flex space-x-2 w-full overflow-x-auto scrollbar-">
+							<div className="flex space-x-2 w-max overflow-x-auto scrollbar-">
 								{Array.from({ length: totalPages }, (_, i) => i + 1).map(
 									(page) => (
 										<button
@@ -253,7 +296,7 @@ const App = () => {
 					</div>
 
 					{/* Map Section */}
-					<div className="md:w-3/5 w-full h-max bg-white shadow rounded-lg p-4 mb-10 lg:mx-auto">
+					<div className="md:w-3/5 w-full h-max bg-white shadow rounded-lg p-4 mb-2 md:mb-10 lg:mx-auto">
 						<ComposableMap
 							projectionConfig={PROJECTION_CONFIG}
 							projection="geoMercator"
