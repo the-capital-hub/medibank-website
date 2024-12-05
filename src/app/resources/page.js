@@ -4,12 +4,12 @@ import Blogsection from "@/components/Home/Blogsection";
 export default function page() {
 	return (
 		<div className="mt-[100px]">
-			<div id="resources1" className="bg-white py-2 px-16">
+			<div id="resources1" className="bg-white py-2 md:px-16 px-8">
 				<h1 className="text-[48px] font-semibold">Resources</h1>
 				<div className="text-left text-[22px] font-semibold py-3">
 					ABHA / ABDM
 				</div>
-				<div className=" flex flex-col-reverse flex-nowrap py-[30px] bg-[#F7F5FF] md:flex-row rounded-[30px] justify-center items-center ">
+				<div className=" flex flex-col-reverse flex-nowrap py-[30px] px-[30px] bg-[#F7F5FF] md:flex-row rounded-[30px] justify-center items-center ">
 					<div className="md:w-[400px] w-[200px] m-auto">
 						<Image
 							src="/images/he.webp"
@@ -47,7 +47,7 @@ export default function page() {
 				</div>
 			</div>
 			<div className="bg-white text-black py-10 px-16">
-				<div className=" flex flex-col-reverse flex-nowrap sm:py-[40px] md:flex-row rounded-[30px] justify-center items-center ">
+				<div className=" flex flex-col flex-nowrap sm:py-[40px] md:flex-row rounded-[30px] justify-center items-center ">
 					<div className="text-[12px] md:text-[16px] md:w-1/2 m-auto w-full text-justify">
 						<div className="text-left text-2xl sm:text-[48px] font-semibold py-4 sm:py-7">
 							Health Guides
@@ -64,7 +64,7 @@ export default function page() {
 						different and for specific individual needs, please consult a
 						doctor.
 					</div>
-					<div className="md:w-[400px] w-[200px] m-auto relative">
+					<div className="md:w-[400px] w-[100%] m-auto mt-[20px] relative">
 						<Image
 							src="/images/healthResources.png"
 							className="w-full h-full m-auto"
@@ -73,8 +73,8 @@ export default function page() {
 							height="1511"
 						/>
 
-						<a href="/health-guides" target="__blank">
-							<div className="absolute bottom-0 right-0 z-10">
+						<a href="/health-guides">
+							<div className="absolute bottom-0 right-0 ">
 								<Image
 									src="/images/healthResourcesBtn.png"
 									className=""
@@ -111,10 +111,9 @@ export default function page() {
 						privacy policy clearly explains all that a user needs to know about
 						what information we collect, how we store it, use it and share it
 						with. Please click below to read more about it.
-						<div className="text-left mt-7">
+						<div className="md:text-left sm:text-center mt-7">
 							<a
 								href="/privacy-policy"
-								target="__blank"
 								className="bg-[#6D4AFF] text-white rounded-[20px] p-3"
 							>
 								Read More

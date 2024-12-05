@@ -46,7 +46,7 @@ export default function Home() {
 							<span className="text-indigo-600">Healthcare</span>, With{" "}
 							<span className="text-indigo-600">
 								Centralised Digital Health
-							</span>
+							</span>{" "}
 							Records
 						</h1>
 						{/* Image Section hidden on mobile */}
