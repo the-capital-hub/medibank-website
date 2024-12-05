@@ -17,9 +17,22 @@ export default function ChemistryAtWorkSection() {
 		exit: { opacity: 0, y: -50, transition: { duration: 0.8 } },
 	};
 
+	// const textVariants = {
+	// 	hidden: { opacity: 0, x: -50 },
+	// 	visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+	// };
+
 	const textVariants = {
-		hidden: { opacity: 0, x: -50 },
-		visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+		hidden: { opacity: 0, x: -100, rotate: -10 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			rotate: 0,
+			transition: {
+				duration: 0.8,
+				ease: "easeOut",
+			},
+		},
 	};
 
 	const imageVariants = {
@@ -34,7 +47,7 @@ export default function ChemistryAtWorkSection() {
 
 	return (
 		<motion.div
-			className="bg-blue-50 sm:py-16"
+			// className="bg-blue-50 sm:py-16"
 			variants={containerVariants}
 			initial="hidden"
 			whileInView="visible"
@@ -55,20 +68,21 @@ export default function ChemistryAtWorkSection() {
 						challenge. Patients are burdened with the task of maintaining and
 						presenting their extensive paper-based medical records. The loss or
 						misplacement of these records often leads to a fragmented
-						understanding of a patient&apos;s medical history. This not only puts a
-						strain on doctors but also compromises the quality of care,
+						understanding of a patient&apos;s medical history. This not only
+						puts a strain on doctors but also compromises the quality of care,
 						resulting in potential health risks. Introducing MediBank,{" "}
 						<span className="text-[#6D4AFF]">
-							India&apos;s first cloud based Electronic Health Records (EHR) platform
-						
-						with centralised digital health records accessible by both patients
-						and doctors.</span>{" "} MediBank offers a comprehensive, secure, and
-						user-friendly Electronic Health Record (EHR) platform which
-						eliminates the hassle of paper prescriptions and the risk of lost
-						information. By centralizing & digitising health records and
-						utilising the inbuilt AI-driven health charts, we aim to streamline
-						healthcare coordination and enable early detection of potential
-						health issues, thereby advancing preventive care in India.
+							India&apos;s first cloud based Electronic Health Records (EHR)
+							platform with centralised digital health records accessible by
+							both patients and doctors.
+						</span>{" "}
+						MediBank offers a comprehensive, secure, and user-friendly
+						Electronic Health Record (EHR) platform which eliminates the hassle
+						of paper prescriptions and the risk of lost information. By
+						centralizing & digitising health records and utilising the inbuilt
+						AI-driven health charts, we aim to streamline healthcare
+						coordination and enable early detection of potential health issues,
+						thereby advancing preventive care in India.
 					</p>
 					<motion.button
 						className="bg-[#6D4AFF] from-orange-600 to-yellow-400 text-white px-6 py-2 rounded-full"

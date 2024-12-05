@@ -53,11 +53,11 @@ export default function Home() {
 							className="text-sm font-medium text-gray-600 mb-4"
 							variants={fadeInImage}
 						>
-							<div className='flex gap-10'>
+							<div className='flex gap-10 justify-center'>
 								<Image className='blur-[2px]' src='/images/QR.png' width='100' height='100' alt="qr" />
 								<Image className='blur-[2px]' src='/images/QR.png' width='100' height='100' alt="qr" />
 							</div>
-							<div className='flex gap-10'>
+							<div className='flex gap-10 justify-center'>
 								<Image src='/images/playstore.png' className='h-auto' width='100' height='100' alt="qr" />
 								<Image src='/images/appstore.png' width='100' height='50' alt="qr" />
 							</div>
