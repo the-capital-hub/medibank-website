@@ -10,7 +10,7 @@ export default function WhyUs() {
 			source: "I",
 			path: "/blog/article1",
 			content:
-				"store your medical records digitally at a centralised location and have the freedom to never carry your paper prescription or lab report",
+				"Store your medical records digitally at a centralised location and have the freedom to never carry your paper prescription or lab report",
 		},
 		{
 			imgurl: "/images/blogs/blog2.webp",

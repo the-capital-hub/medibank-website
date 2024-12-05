@@ -61,6 +61,9 @@ const getHeatMapData = () => [
 			Doctors: {
 				"General Physician": 5,
 				Dentist: 6,
+				"ENT Specialist": 4,
+				Ophthalmologist: 5,
+				Gynaecologist: 6,
 				Cardiologist: 7,
 				Dermatologist: 8,
 			},
@@ -87,7 +90,11 @@ const App = () => {
 	const [activeTab, setActiveTab] = useState("Doctors");
 	const [activeState, setActiveState] = useState(data[0]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [showAllSubcategories, setShowAllSubcategories] = useState(false); // New State
+	const [showAllSubcategories, setShowAllSubcategories] = useState({
+		Doctors: false,
+		Labs: false,
+		Hospitals: false,
+	}); // Modified to separate state for each tab
 
 	const cardsPerPage = 12;
 	const subcategories = activeState?.value[activeTab] || {};
@@ -105,7 +112,11 @@ const App = () => {
 		if (current) {
 			setActiveState(current);
 			setCurrentPage(1);
-			setShowAllSubcategories(false);
+			setShowAllSubcategories({
+				Doctors: false,
+				Labs: false,
+				Hospitals: false,
+			}); // Reset subcategories state for all tabs
 		}
 	};
 
@@ -117,8 +128,11 @@ const App = () => {
 		if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
 	};
 
-	const toggleShowAllSubcategories = () => {
-		setShowAllSubcategories((prev) => !prev);
+	const toggleShowAllSubcategories = (tab) => {
+		setShowAllSubcategories((prev) => ({
+			...prev,
+			[tab]: !prev[tab], // Toggle only the selected tab
+		}));
 	};
 
 	const getIconForCategory = (tab) => {
@@ -164,7 +178,10 @@ const App = () => {
 				{/* Subcategories Section */}
 				<div className="flex flex-wrap sm:flex-nowrap text-center gap-4 bg-gray-100 py-3 rounded-md mb-6 shadow relative">
 					{subcategoryEntries
-						.slice(0, showAllSubcategories ? subcategoryEntries.length : 3)
+						.slice(
+							0,
+							showAllSubcategories[activeTab] ? subcategoryEntries.length : 3
+						)
 						.map(([category, count], index) => (
 							<p
 								key={index}
@@ -178,10 +195,10 @@ const App = () => {
 						))}
 					{subcategoryEntries.length > 4 && (
 						<button
-							className=" text-blue-500 font-semibold text-sm"
-							onClick={toggleShowAllSubcategories}
+							className="text-blue-500 font-semibold text-sm"
+							onClick={() => toggleShowAllSubcategories(activeTab)}
 						>
-							{showAllSubcategories ? "Show Less" : "See More"}
+							{showAllSubcategories[activeTab] ? "Show Less" : "See More"}
 						</button>
 					)}
 				</div>
