@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+	FaAngleDown,
+	FaChevronCircleDown,
+	FaAngleUp,
+	FaChevronCircleUp,
+} from "react-icons/fa";
 
 export default function WhyUs() {
 	const blogList = [
@@ -48,6 +54,7 @@ export default function WhyUs() {
 
 	const [mainBlog, setMainBlog] = useState(blogList[0]); // Set the initial main blog
 	const [isSwitching, setIsSwitching] = useState(false);
+	const [viewDetails, setViewDetails] = useState([]);
 
 	const handleBlogClick = (blog) => {
 		if (blog.title !== mainBlog.title) {
@@ -56,6 +63,14 @@ export default function WhyUs() {
 				setMainBlog(blog);
 				setIsSwitching(false); // Reset the animation state
 			}, 500); // Match the duration of the animation
+		}
+	};
+
+	const handleViewDetailsClick = (title) => {
+		if (!viewDetails.includes(title)) {
+			setViewDetails([...viewDetails, title]); // Add the title to the viewDetails array
+		} else {
+			setViewDetails(viewDetails.filter((b) => b !== title)); // Remove the title from the viewDetails array
 		}
 	};
 
@@ -78,7 +93,7 @@ export default function WhyUs() {
 
 	return (
 		<div className="text-center">
-			<h2 className="w-[90%] text-left md:text-[35px] m-auto py-6 md:leading-[52px] font-semibold text-[#000339] text-[17px] leading-[25px]">
+			<h2 className="w-[90%] text-left md:text-[35px] m-auto py-6 md:leading-[52px] font-semibold text-[#000339] text-3xl leading-[25px]">
 				Why <span style={{ color: "#6D4AFF" }}>Choose</span> Us ?
 			</h2>
 			<h3 className="w-[90%] text-left m-auto text-[#000339] text-[17px] leading-[25px]">
@@ -108,16 +123,31 @@ export default function WhyUs() {
 							</div>
 
 							{/* Content Section */}
-							<div className="flex flex-col ml-8">
-								<div className="font-bold text-lg w-[85%]">{item.title}</div>
-								<div className="text-gray-600 w-[80%] text-sm">
-									{item.content}
+							<div className="flex ml-8 items-start w-full">
+								<button
+									className="text-lg text-blue-500 rounded-full mt-2 w-max sm:hidden" // Only show on mobile
+									onClick={() => handleViewDetailsClick(item.title)}
+								>
+									{viewDetails.includes(item.title) ? (
+										<FaChevronCircleUp />
+									) : (
+										<FaChevronCircleDown />
+									)}
+								</button>
+								<div className="flex flex-col items-center gap-2 w-full">
+									<div className="font-bold text-lg w-[85%]">{item.title}</div>
+									{/* Always show content on desktop, show conditionally on mobile */}
+									<div
+										className={`text-gray-600 w-[85%] text-sm ${viewDetails.includes(item.title) ? "block sm:block" : "hidden sm:block"}`}
+									>
+										{item.content}
+									</div>
 								</div>
 							</div>
 
 							{/* Arrow Icon */}
 							<div
-								className="absolute sm:h-1/2 w-[60px] ml-auto -bottom-0.5 -right-0.5 flex justify-center items-center"
+								className="absolute sm:h-1/2 w-[30px] md:w-[60px] ml-auto -bottom-0.5 -right-0.5 flex justify-center items-center"
 								style={{
 									backgroundColor: "white",
 									borderRadius: "20px 0px 20px 0px", // Top-left, Top-right, Bottom-right, Bottom-left
