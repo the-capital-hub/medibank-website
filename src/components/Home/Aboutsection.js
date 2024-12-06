@@ -99,7 +99,7 @@ export default function ChemistryAtWorkSection() {
 				>
 					<div className="relative">
 						<Image
-							src="/images/Groupabout.png"
+							src="/images/addingvalue.png"
 							className="rounded-lg"
 							alt="About MediBank section"
 							width={640}
