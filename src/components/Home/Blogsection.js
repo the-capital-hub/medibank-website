@@ -86,7 +86,11 @@ export default function BlogSection() {
 			</motion.div>
 			<div className="flex flex-col sm:flex-row py-6 justify-between items-center mxxxl:container w-[90%] m-auto xl:container">
 				{/* Main Blog Section with Animation */}
-				<motion.div className="sm:w-[45%]" variants={mainBlogVariants}>
+				{/* for desktop view */}
+				<motion.div
+					className="sm:w-[45%] hidden md:block"
+					variants={mainBlogVariants}
+				>
 					<AnimatePresence mode="wait">
 						{!isSwitching && (
 							<motion.div
@@ -114,6 +118,48 @@ export default function BlogSection() {
 									Source: {mainBlog.source}
 								</div>
 								<p className="text-left px-6 pb-6">{mainBlog.content}</p>
+							</motion.div>
+						)}
+					</AnimatePresence>
+				</motion.div>
+				{/* for mobile view */}
+				<motion.div
+					className="sm:w-[45%] block md:hidden"
+					variants={mainBlogVariants}
+				>
+					<AnimatePresence mode="wait">
+						{!isSwitching && (
+							<motion.div
+								key={mainBlog.title}
+								initial="hidden"
+								animate="visible"
+								exit="hidden"
+								variants={mainBlogVariants}
+								className="main-blog shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-[10px] bg-white mb-6 p-4 flex min-h-[125px]"
+								// className="flex shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-[10px] p-4 bg-white cursor-pointer transition-transform hover:scale-105"
+							>
+								<a href={mainBlog.path} tabIndex="0">
+								<div className="flex-shrink-0">
+									<Image
+										src={mainBlog.imgurl}
+										alt={mainBlog.title}
+										className="rounded-[7px] object-cover min-w-[120px]"
+										width="120"
+										height="100"
+										loading="lazy"
+									/>
+								</div>
+								</a>
+								{/* Blog Content */}
+								<div className="flex flex-col pl-4 text-left">
+									<div className="text-left font-bold">
+										{mainBlog.title}
+									</div>
+									<div className="text-left text-[#636384] text-[14px]">
+										Source: {mainBlog.source}
+									</div>
+									{/* <p className="text-left">{mainBlog.content}</p> */}
+								</div>
 							</motion.div>
 						)}
 					</AnimatePresence>
