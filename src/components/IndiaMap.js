@@ -326,47 +326,83 @@ const App = () => {
 						</div>
 
 						{/* Pagination */}
-						<div className="my-12 flex justify-center items-center space-x-2 ">
+					<div className="my-12 flex justify-center items-center space-x-2">
+					<button
+						onClick={handlePrevPage}
+						disabled={currentPage === 1}
+						className={`px-4 py-2 rounded-full ${
+						currentPage === 1 ? "bg-gray-300 text-gray-500" : "bg-blue-500 text-white"
+						}`}
+					>
+						&lt;
+					</button>
+					<div className="flex space-x-2 w-max overflow-x-auto">
+						{/* First Page */}
+						<button
+						onClick={() => setCurrentPage(1)}
+						className={`px-4 py-2 rounded-full ${
+							currentPage === 1 ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
+						}`}
+						>
+						1
+						</button>
+
+						{/* Dots before current page if needed */}
+						{currentPage > 3 && (
+						<span className="px-2 py-1 text-gray-500">...</span>
+						)}
+
+						{/* Current page and its neighbors */}
+						{Array.from({ length: totalPages }, (_, i) => i + 1)
+						.filter(
+							(page) =>
+							  page !== 1 && page !== totalPages && // Exclude first and last pages
+							  (page === currentPage || page === currentPage - 1 || page === currentPage + 1)
+						)
+						.map((page) => (
 							<button
-								onClick={handlePrevPage}
-								disabled={currentPage === 1}
-								className={`px-4 py-2 rounded-full ${
-									currentPage === 1
-										? "bg-gray-300 text-gray-500"
-										: "bg-blue-500 text-white"
-								}`}
+							key={page}
+							onClick={() => setCurrentPage(page)}
+							className={`px-4 py-2 rounded-full ${
+								currentPage === page ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
+							}`}
 							>
-								&lt;
+							{page}
 							</button>
-							<div className="flex space-x-2 w-max overflow-x-auto scrollbar-">
-								{Array.from({ length: totalPages }, (_, i) => i + 1).map(
-									(page) => (
-										<button
-											key={page}
-											onClick={() => setCurrentPage(page)}
-											className={`px-4 py-2 rounded-full ${
-												currentPage === page
-													? "bg-blue-500 text-white"
-													: "bg-gray-200 text-gray-700"
-											}`}
-										>
-											{page}
-										</button>
-									)
-								)}
-							</div>
-							<button
-								onClick={handleNextPage}
-								disabled={currentPage === totalPages}
-								className={`px-4 py-2 rounded-full ${
-									currentPage === totalPages
-										? "bg-gray-300 text-gray-500"
-										: "bg-blue-500 text-white"
-								}`}
-							>
-								&gt;
-							</button>
-						</div>
+						))}
+
+						{/* Dots after current page if needed */}
+						{currentPage < totalPages - 2 && (
+						<span className="px-2 py-1 text-gray-500">...</span>
+						)}
+
+						{/* Last Page */}
+						{totalPages > 1 && (
+						<button
+							onClick={() => setCurrentPage(totalPages)}
+							className={`px-4 py-2 rounded-full ${
+							currentPage === totalPages
+								? "bg-blue-500 text-white"
+								: "bg-gray-200 text-gray-700"
+							}`}
+						>
+							{totalPages}
+						</button>
+						)}
+					</div>
+					<button
+						onClick={handleNextPage}
+						disabled={currentPage === totalPages}
+						className={`px-4 py-2 rounded-full ${
+						currentPage === totalPages
+							? "bg-gray-300 text-gray-500"
+							: "bg-blue-500 text-white"
+						}`}
+					>
+						&gt;
+					</button>
+					</div>
+
 					</div>
 
 					{/* Map Section */}
