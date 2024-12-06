@@ -14,8 +14,9 @@ export default function Footer() {
 						position: "relative",
 						width: "100%",
 						height: "100%",
-						background: `radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 11%)`,
-						backgroundSize: "30px 30px",
+						backgroundImage: "url('/images/footerframe.png')",
+						backgroundSize: "1000px 1000px",
+						backgroundPosition: "-200px -400px"
 					}}
 				>
 					<div
