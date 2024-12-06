@@ -142,7 +142,7 @@ export default function Page() {
 											alt="profile-picture"
 										/>
 									</div>
-									<div className=" absolute top-0 bottom-0 w-full h-[273px] md:h-full backface_hidden rotate-y-180 pb-4 bg-[#927e7e] text-white">
+									<div className=" absolute top-0 bottom-0 w-full h-[273px] md:h-full backface_hidden rotate-y-180 pb-4  bg-gradient-to-r from-purple-200 via-purple-100 to-blue-200 border text-black">
 										{" "}
 										{/*backcard */}
 										<p className="p-4 text-[13px] mb-4 leading-[16px] max-h-[257px] overflow-hidden box-border ">
