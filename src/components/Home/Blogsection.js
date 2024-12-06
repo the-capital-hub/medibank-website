@@ -79,7 +79,7 @@ export default function BlogSection() {
 			viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the section is in view
 		>
 			<motion.div
-				className="text-3xl md:text-[35px] py-6 md:leading-[52px] font-semibold text-[#000339] leading-[25px]"
+				className="text-3xl md:text-[35px]  md:leading-[52px] font-semibold text-[#000339] leading-[25px]"
 				variants={mainBlogVariants}
 			>
 				Blogs

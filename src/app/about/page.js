@@ -1,19 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import ContactUs from "@/components/ContactUs";
 
 export default function Page() {
-	const [rotatedCards, setRotatedCards] = useState({});
-
-	// Handler for toggling card rotation
-	const handleCardToggle = (index) => {
-		setRotatedCards((prev) => ({
-			...prev,
-			[index]: !prev[index],
-		}));
-	};
 	const founderData = [
 		{
 			Name: "Adi Vangveti",
@@ -91,12 +80,11 @@ export default function Page() {
 	];
 
 	return (
-		<div className="relative">
+		<div>
 			{/* Our Story */}
 			<div
 				id="about1"
-				// className="mx-10 md:mx-16 h-max md:h-screen flex flex-col md:flex-row items-center mb-8 md:mb-0 sticky"
-				className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-50 to-white overflow-hidden"
+				className="mx-10 md:mx-16 h-max md:h-screen flex flex-col md:flex-row items-center mb-8 md:mb-0"
 			>
 				<div className="md:container text-left text-[22px] pt-28 md:pt-16 w-full md:w-1/2">
 					<h2 className="font-bold">Our Story</h2>
@@ -123,33 +111,14 @@ export default function Page() {
 				<div className="md:container flex justify-center w-full md:w-1/2">
 					<Image
 						src="/images/ourstory.png"
-						width={300}
-						height={300}
+						width={500}
+						height={200}
 						alt="Our Story"
 						className="text-center rounded-xl"
 					/>
 				</div>
-
-				{/* Scroll Down Indicator */}
-				<div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-					<div className="animate-bounce">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							className="h-10 w-10 text-blue-600"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth={2}
-								d="M19 14l-7 7m0 0l-7-7m7 7V3"
-							/>
-						</svg>
-					</div>
-				</div>
 			</div>
+
 			{/* Founding Team */}
 			<div className="bg-white">
 				<h2 className="container text-center text-[28px] md:text-[30px] mb-8 md:mb-0 font-bold pt-0">
@@ -162,27 +131,18 @@ export default function Page() {
 								key={index}
 								className="group relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-80 mb-4"
 							>
-								<div
-									className={`
-              relative mx-4 mt-4 text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl 
-              h-[250px] md:h-[300px] sog_animation 
-              md:group-hover:rotate-y-180 
-              ${rotatedCards[index] ? "rotate-y-180" : ""}
-            `}
-									// For mobile, use onClick to toggle
-									onClick={() => handleCardToggle(index)}
-								>
+								<div className="relative mx-4 mt-4 text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-[250px] md:h-[300px] sog_animation group-hover:rotate-y-180">
 									<div className="absolute top-0 bottom-0 w-full h-max backface_hidden overflow-hidden">
 										{" "}
 										<Image
 											src={item.imgurl}
-											className="w-full h-[250px] md:h-[300px] object-cover"
+											className="w-full h-[250px] md:h-[300px] "
 											width="612"
 											height="612"
 											alt="profile-picture"
 										/>
 									</div>
-									<div className=" absolute top-0 bottom-0 w-full h-[273px] md:h-full backface_hidden rotate-y-180 group-hover:rotate-y-0 pb-4 bg-[#927e7e] text-white">
+									<div className=" absolute top-0 bottom-0 w-full h-[273px] md:h-full backface_hidden rotate-y-180 pb-4 bg-[#927e7e] text-white">
 										{" "}
 										{/*backcard */}
 										<p className="p-4 text-[13px] mb-4 leading-[16px] max-h-[257px] overflow-hidden box-border ">
@@ -204,6 +164,7 @@ export default function Page() {
 					</div>
 				</div>
 			</div>
+
 			{/* Advisory Panel */}
 			<div className="bg-white">
 				<div className="w-4/5 container py-16">
@@ -228,7 +189,7 @@ export default function Page() {
 												alt="profile-picture"
 											/>
 										</div>
-										<div className=" absolute rounded-[10px] top-0 bottom-0 w-full h-full backface_hidden rotate-y-180 bg-[#927e7e] text-white">
+										<div className=" absolute rounded-[10px] top-0 bottom-0 w-full h-full backface_hidden rotate-y-180 bg-gradient-to-r from-purple-200 via-purple-100 to-blue-200 border text-black">
 											{" "}
 											{/*backcard */}
 											<p className="p-4 text-[13px] leading-[16px]">
