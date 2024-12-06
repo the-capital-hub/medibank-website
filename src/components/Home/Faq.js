@@ -25,7 +25,7 @@ const data = [
 	},
 	{
 		ques: "Is Medibank free to use?",
-		ans: "Users can register on Medibank and create their account for free. However, to use the full functionality and take advantage of the system, users have to pay a low cost monthly or annual subscription fee.",
+		ans: "Users can register on Medibank and create their account for free. However, to use the full functionality and take advantage of the system, users have to pay a low-cost subscription fee",
 	},
 	{
 		ques: "What is the cost to use the app?",

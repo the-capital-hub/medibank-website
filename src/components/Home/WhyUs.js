@@ -97,7 +97,7 @@ export default function WhyUs() {
 				Why <span style={{ color: "#6D4AFF" }}>Choose</span> Us ?
 			</h2>
 			<h3 className="w-[90%] text-left m-auto text-[#000339] text-[17px] leading-[25px]">
-				Transforming India&apos;s healthcare one step at a time by EHR
+				Transforming India&apos;s healthcare one step at a time with EHR
 			</h3>
 			<div className="flex py-6 justify-between items-center mxxxl:container w-[90%] m-auto xl:container">
 				{/* Other Blogs */}

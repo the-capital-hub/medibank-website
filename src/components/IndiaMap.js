@@ -29,61 +29,135 @@ const geographyStyle = {
 
 const getHeatMapData = () => [
 	{
-		id: "AP",
-		state: "Andhra Pradesh",
-		value: {
-			Doctors: {
-				"General Physician": 25,
-				Dentist: 20,
-				Cardiologist: 10,
-				Dermatologist: 20,
-			},
-			Labs: {
-				Pathology: 50,
-				Radiology: 40,
-				Biochemistry: 30,
-				Microbiology: 25,
-				Hematology: 15,
-			},
-			Hospitals: {
-				Government: 15,
-				Private: 10,
-				Multispecialty: 5,
-				"Children's": 7,
-				Orthopedic: 8,
-			},
-		},
+	  id: "AP",
+	  state: "Andhra Pradesh",
+	  value: {
+		Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 15, Dentist: 10 },
+		Labs: { Pathology: 40, Radiology: 30, Biochemistry: 25, Microbiology: 25 },
+		Hospitals: { Government: 10, Private: 10, Multispecialty: 3, "Children's": 2 },
+	  },
 	},
 	{
-		id: "JK",
-		state: "Jammu & Kashmir",
-		value: {
-			Doctors: {
-				"General Physician": 5,
-				Dentist: 6,
-				"ENT Specialist": 4,
-				Ophthalmologist: 5,
-				Gynaecologist: 6,
-				Cardiologist: 7,
-				Dermatologist: 8,
-			},
-			Labs: {
-				Pathology: 9,
-				Radiology: 10,
-				Biochemistry: 12,
-				Microbiology: 11,
-				Hematology: 13,
-			},
-			Hospitals: {
-				Government: 14,
-				Private: 15,
-				Multispecialty: 5,
-				"Children's": 7,
-				Orthopedic: 8,
-			},
-		},
+	  id: "AR",
+	  state: "Arunachal Pradesh",
+	  value: {
+		Doctors: { "General Physician": 5, Cardiologist: 3, Dermatologist: 1, Dentist: 1 },
+		Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
+		Hospitals: { Government: 2, Private: 1, Multispecialty: 0, "Children's": 0 },
+	  },
 	},
-];
+	{
+	  id: "AS",
+	  state: "Assam",
+	  value: {
+		Doctors: { "General Physician": 25, Cardiologist: 15, Dermatologist: 10, Dentist: 10 },
+		Labs: { Pathology: 25, Radiology: 20, Biochemistry: 15, Microbiology: 10 },
+		Hospitals: { Government: 10, Private: 5, Multispecialty: 2, "Children's": 1 },
+	  },
+	},
+	{
+	  id: "BR",
+	  state: "Bihar",
+	  value: {
+		Doctors: { "General Physician": 20, Cardiologist: 10, Dermatologist: 8, Dentist: 7 },
+		Labs: { Pathology: 30, Radiology: 20, Biochemistry: 10, Microbiology: 5 },
+		Hospitals: { Government: 8, Private: 3, Multispecialty: 1, "Children's": 0 },
+	  },
+	},
+	{
+	  id: "CG",
+	  state: "Chhattisgarh",
+	  value: {
+		Doctors: { "General Physician": 18, Cardiologist: 10, Dermatologist: 7, Dentist: 5 },
+		Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 10 },
+		Hospitals: { Government: 5, Private: 4, Multispecialty: 1, "Children's": 0 },
+	  },
+	},
+	{
+	  id: "GA",
+	  state: "Goa",
+	  value: {
+		Doctors: { "General Physician": 10, Cardiologist: 5, Dermatologist: 5, Dentist: 5 },
+		Labs: { Pathology: 10, Radiology: 8, Biochemistry: 7, Microbiology: 5 },
+		Hospitals: { Government: 3, Private: 2, Multispecialty: 1, "Children's": 1 },
+	  },
+	},
+	{
+	  id: "GJ",
+	  state: "Gujarat",
+	  value: {
+		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		Labs: { Pathology: 60, Radiology: 50, Biochemistry: 40, Microbiology: 30 },
+		Hospitals: { Government: 20, Private: 10, Multispecialty: 5, "Children's": 3 },
+	  },
+	},
+	{
+	  id: "HR",
+	  state: "Haryana",
+	  value: {
+		Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 10, Dentist: 10 },
+		Labs: { Pathology: 30, Radiology: 25, Biochemistry: 20, Microbiology: 15 },
+		Hospitals: { Government: 10, Private: 7, Multispecialty: 2, "Children's": 1 },
+	  },
+	},
+	{
+	  id: "HP",
+	  state: "Himachal Pradesh",
+	  value: {
+		Doctors: { "General Physician": 15, Cardiologist: 8, Dermatologist: 5, Dentist: 2 },
+		Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 5 },
+		Hospitals: { Government: 5, Private: 3, Multispecialty: 1, "Children's": 1 },
+	  },
+	},
+	{
+	  id: "JH",
+	  state: "Jharkhand",
+	  value: {
+		Doctors: { "General Physician": 18, Cardiologist: 10, Dermatologist: 5, Dentist: 2 },
+		Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 10 },
+		Hospitals: { Government: 10, Private: 3, Multispecialty: 1, "Children's": 1 },
+	  },
+	},
+	{
+	  id: "KA",
+	  state: "Karnataka",
+	  value: {
+		Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 15, Dentist: 12 },
+		Labs: { Pathology: 50, Radiology: 40, Biochemistry: 30, Microbiology: 20 },
+		Hospitals: { Government: 10, Private: 10, Multispecialty: 5, "Children's": 2 },
+	  },
+	},
+	{
+	  id: "KL",
+	  state: "Kerala",
+	  value: {
+		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15 },
+		Labs: { Pathology: 60, Radiology: 50, Biochemistry: 40, Microbiology: 30 },
+		Hospitals: { Government: 15, Private: 10, Multispecialty: 5, "Children's": 3 },
+	  },
+	},
+	{
+	  id: "MH",
+	  state: "Maharashtra",
+	  value: {
+		Doctors: { "General Physician": 50, Cardiologist: 30, Dermatologist: 25, Dentist: 20 },
+		Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
+		Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
+	  },
+	},
+	{
+	  id: "TN",
+	  state: "Tamil Nadu",
+	  value: {
+		Doctors: { "General Physician": 50, Cardiologist: 30, Dermatologist: 25, Dentist: 20 },
+		Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+	  },
+	},
+	// Add remaining states and union territories with similar structure
+  ];
+  
+
 
 const App = () => {
 	const [data] = useState(getHeatMapData());

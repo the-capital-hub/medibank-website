@@ -84,12 +84,12 @@ export default function ChemistryAtWorkSection() {
 						coordination and enable early detection of potential health issues,
 						thereby advancing preventive care in India.
 					</p>
-					<motion.button
+					{/* <motion.button
 						className="bg-[#6D4AFF] from-orange-600 to-yellow-400 text-white px-6 py-2 rounded-full"
 						variants={buttonVariants}
 					>
 						Know More
-					</motion.button>
+					</motion.button> */}
 				</motion.div>
 
 				{/* Image Section */}
