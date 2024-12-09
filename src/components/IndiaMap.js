@@ -38,6 +38,15 @@ const getHeatMapData = () => [
 	  },
 	},
 	{
+		id: "JK",
+		state: "Jammu and Kashmir",
+		value: {
+		  Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 15, Dentist: 10 },
+		  Labs: { Pathology: 40, Radiology: 30, Biochemistry: 25, Microbiology: 25 },
+		  Hospitals: { Government: 10, Private: 10, Multispecialty: 3, "Children's": 2 },
+		},
+	  },
+	{
 	  id: "AR",
 	  state: "Arunachal Pradesh",
 	  value: {
@@ -137,23 +146,203 @@ const getHeatMapData = () => [
 	  },
 	},
 	{
+		id: "MP",
+		state: "Madhya Pradesh",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15 },
+		  Labs: { Pathology: 60, Radiology: 50, Biochemistry: 40, Microbiology: 30 },
+		  Hospitals: { Government: 15, Private: 10, Multispecialty: 5, "Children's": 3 },
+		},
+	},
+	{
 	  id: "MH",
 	  state: "Maharashtra",
 	  value: {
-		Doctors: { "General Physician": 50, Cardiologist: 30, Dermatologist: 25, Dentist: 20 },
+		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
 		Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
 		Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
 	  },
 	},
 	{
-	  id: "TN",
-	  state: "Tamil Nadu",
+		id: "MN",
+		state: "Manipur",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
+		},
+	},
+	{
+		id: "ML",
+		state: "Meghalaya",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
+		},
+	},
+	{
+	  id: "MZ",
+	  state: "Mizoram",
 	  value: {
-		Doctors: { "General Physician": 50, Cardiologist: 30, Dermatologist: 25, Dentist: 20 },
+		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
 		Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
 		Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
 	  },
 	},
+	{
+		id: "NL",
+		state: "Nagaland",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "OR",
+		state: "Odisha",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "PB",
+		state: "Punjab",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "RJ",
+		state: "Rajasthan",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "SK",
+		state: "Sikkim",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "TN",
+		state: "Tamil Nadu",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "TR",
+		state: "Tripura",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "UP",
+		state: "Uttar Pradesh",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "UT",
+		state: "Uttarakhand",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "WB",
+		state: "West Bengal",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "DL",
+		state: "Delhi",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "JK",
+		state: "Jammu and Kashmir",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "LD",
+		state: "Lakshadweep",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "PY",
+		state: "Puducherry",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "AN",
+		state: "Andaman & Nicobar",
+		value: {
+		  Doctors: { "General Physician": 35, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "CH",
+		state: "Chandigarh",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
+		id: "DN",
+		state: "Dadra & Nagar Haveli and Daman & Diu",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
 	// Add remaining states and union territories with similar structure
   ];
   
@@ -221,8 +410,7 @@ const App = () => {
 			<div className="py-6">
 				<div className="container mx-auto text-center">
 					<h1 className="text-4xl font-bold text-black">
-						Our Partners in{" "}
-						<span className="text-blue-500">{activeState?.state}</span>
+						Our Partners
 					</h1>
 				</div>
 			</div>
@@ -406,7 +594,13 @@ const App = () => {
 					</div>
 
 					{/* Map Section */}
-					<div className="md:w-3/5 w-full h-max bg-white shadow rounded-lg p-4 mb-2 md:mb-10 lg:mx-auto">
+					<div className="md:w-3/5 relative w-full h-max bg-white shadow rounded-lg p-4 mb-2 md:mb-10 lg:mx-auto">
+						{/* Active State Name */}
+						<div className="text-center absolute top-[100px] right-[50px] mb-4">
+							<h2 className="text-2xl font-semibold bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
+								{activeState?.state ? `${activeState.state}` : "Select a State"}
+							</h2>
+						</div>
 						<ComposableMap
 							projectionConfig={PROJECTION_CONFIG}
 							projection="geoMercator"
@@ -431,6 +625,7 @@ const App = () => {
 							</Geographies>
 						</ComposableMap>
 					</div>
+
 				</div>
 			</div>
 		</div>

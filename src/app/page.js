@@ -176,12 +176,12 @@ export default function Home() {
 			</motion.div>
 
 			{/* About Section */}
-			<div className="py-6 md:py-12 px-4 md:px-8 lg:px-0 bg-inherit">
+			<div className="py-6 md:py-12 px-4 md:px-8 lg:px-0 bg-inherit sticky h-screen z-[-1] top-[90px]">
 				<Aboutsection />
 			</div>
 
 			{/* Why Us Section */}
-			<div className="bg-white py-6 md:py-12 px-4 md:px-8">
+			<div className="bg-white py-6 md:py-12 px-4 md:px-8 sticky h-screen z-[-1] top-[90px]">
 				<WhyUs />
 			</div>
 
