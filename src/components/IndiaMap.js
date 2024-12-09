@@ -318,9 +318,9 @@ const getHeatMapData = () => [
 	  },
 	  {
 		id: "AN",
-		state: "Andaman & Nicobar Islands",
+		state: "Andaman & Nicobar",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Doctors: { "General Physician": 35, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
 		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
 		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
 		},
@@ -410,8 +410,7 @@ const App = () => {
 			<div className="py-6">
 				<div className="container mx-auto text-center">
 					<h1 className="text-4xl font-bold text-black">
-						Our Partners in{" "}
-						<span className="text-blue-500">{activeState?.state}</span>
+						Our Partners
 					</h1>
 				</div>
 			</div>
@@ -595,7 +594,13 @@ const App = () => {
 					</div>
 
 					{/* Map Section */}
-					<div className="md:w-3/5 w-full h-max bg-white shadow rounded-lg p-4 mb-2 md:mb-10 lg:mx-auto">
+					<div className="md:w-3/5 relative w-full h-max bg-white shadow rounded-lg p-4 mb-2 md:mb-10 lg:mx-auto">
+						{/* Active State Name */}
+						<div className="text-center absolute top-[100px] right-[50px] mb-4">
+							<h2 className="text-2xl font-semibold bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
+								{activeState?.state ? `${activeState.state}` : "Select a State"}
+							</h2>
+						</div>
 						<ComposableMap
 							projectionConfig={PROJECTION_CONFIG}
 							projection="geoMercator"
@@ -620,6 +625,7 @@ const App = () => {
 							</Geographies>
 						</ComposableMap>
 					</div>
+
 				</div>
 			</div>
 		</div>
