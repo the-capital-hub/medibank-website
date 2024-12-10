@@ -29,324 +29,1000 @@ const geographyStyle = {
 
 const getHeatMapData = () => [
 	{
-	  id: "AP",
-	  state: "Andhra Pradesh",
-	  value: {
-		Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 15, Dentist: 10 },
-		Labs: { Pathology: 40, Radiology: 30, Biochemistry: 25, Microbiology: 25 },
-		Hospitals: { Government: 10, Private: 10, Multispecialty: 3, "Children's": 2 },
-	  },
+		id: "AP",
+		state: "Andhra Pradesh",
+		value: {
+			Doctors: {
+				"General Physician": 30,
+				Cardiologist: 20,
+				Dermatologist: 15,
+				Dentist: 10,
+			},
+			Labs: {
+				Pathology: 40,
+				Radiology: 30,
+				Biochemistry: 25,
+				Microbiology: 25,
+			},
+			Hospitals: {
+				Government: 10,
+				Private: 10,
+				Multispecialty: 3,
+				"Children's": 2,
+			},
+		},
 	},
 	{
 		id: "JK",
 		state: "Jammu and Kashmir",
 		value: {
-		  Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 15, Dentist: 10 },
-		  Labs: { Pathology: 40, Radiology: 30, Biochemistry: 25, Microbiology: 25 },
-		  Hospitals: { Government: 10, Private: 10, Multispecialty: 3, "Children's": 2 },
+			Doctors: {
+				"General Physician": 30,
+				Cardiologist: 20,
+				Dermatologist: 15,
+				Dentist: 10,
+			},
+			Labs: {
+				Pathology: 40,
+				Radiology: 30,
+				Biochemistry: 25,
+				Microbiology: 25,
+			},
+			Hospitals: {
+				Government: 10,
+				Private: 10,
+				Multispecialty: 3,
+				"Children's": 2,
+			},
 		},
-	  },
-	{
-	  id: "AR",
-	  state: "Arunachal Pradesh",
-	  value: {
-		Doctors: { "General Physician": 5, Cardiologist: 3, Dermatologist: 1, Dentist: 1 },
-		Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
-		Hospitals: { Government: 2, Private: 1, Multispecialty: 0, "Children's": 0 },
-	  },
 	},
 	{
-	  id: "AS",
-	  state: "Assam",
-	  value: {
-		Doctors: { "General Physician": 25, Cardiologist: 15, Dermatologist: 10, Dentist: 10 },
-		Labs: { Pathology: 25, Radiology: 20, Biochemistry: 15, Microbiology: 10 },
-		Hospitals: { Government: 10, Private: 5, Multispecialty: 2, "Children's": 1 },
-	  },
+		id: "AR",
+		state: "Arunachal Pradesh",
+		value: {
+			Doctors: {
+				"General Physician": 5,
+				Cardiologist: 3,
+				Dermatologist: 1,
+				Dentist: 1,
+			},
+			Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
+			Hospitals: {
+				Government: 2,
+				Private: 1,
+				Multispecialty: 0,
+				"Children's": 0,
+			},
+		},
 	},
 	{
-	  id: "BR",
-	  state: "Bihar",
-	  value: {
-		Doctors: { "General Physician": 20, Cardiologist: 10, Dermatologist: 8, Dentist: 7 },
-		Labs: { Pathology: 30, Radiology: 20, Biochemistry: 10, Microbiology: 5 },
-		Hospitals: { Government: 8, Private: 3, Multispecialty: 1, "Children's": 0 },
-	  },
+		id: "AS",
+		state: "Assam",
+		value: {
+			Doctors: {
+				"General Physician": 25,
+				Cardiologist: 15,
+				Dermatologist: 10,
+				Dentist: 10,
+			},
+			Labs: {
+				Pathology: 25,
+				Radiology: 20,
+				Biochemistry: 15,
+				Microbiology: 10,
+			},
+			Hospitals: {
+				Government: 10,
+				Private: 5,
+				Multispecialty: 2,
+				"Children's": 1,
+			},
+		},
 	},
 	{
-	  id: "CG",
-	  state: "Chhattisgarh",
-	  value: {
-		Doctors: { "General Physician": 18, Cardiologist: 10, Dermatologist: 7, Dentist: 5 },
-		Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 10 },
-		Hospitals: { Government: 5, Private: 4, Multispecialty: 1, "Children's": 0 },
-	  },
+		id: "BR",
+		state: "Bihar",
+		value: {
+			Doctors: {
+				"General Physician": 20,
+				Cardiologist: 10,
+				Dermatologist: 8,
+				Dentist: 7,
+			},
+			Labs: { Pathology: 30, Radiology: 20, Biochemistry: 10, Microbiology: 5 },
+			Hospitals: {
+				Government: 8,
+				Private: 3,
+				Multispecialty: 1,
+				"Children's": 0,
+			},
+		},
 	},
 	{
-	  id: "GA",
-	  state: "Goa",
-	  value: {
-		Doctors: { "General Physician": 10, Cardiologist: 5, Dermatologist: 5, Dentist: 5 },
-		Labs: { Pathology: 10, Radiology: 8, Biochemistry: 7, Microbiology: 5 },
-		Hospitals: { Government: 3, Private: 2, Multispecialty: 1, "Children's": 1 },
-	  },
+		id: "CG",
+		state: "Chhattisgarh",
+		value: {
+			Doctors: {
+				"General Physician": 18,
+				Cardiologist: 10,
+				Dermatologist: 7,
+				Dentist: 5,
+			},
+			Labs: {
+				Pathology: 20,
+				Radiology: 15,
+				Biochemistry: 10,
+				Microbiology: 10,
+			},
+			Hospitals: {
+				Government: 5,
+				Private: 4,
+				Multispecialty: 1,
+				"Children's": 0,
+			},
+		},
 	},
 	{
-	  id: "GJ",
-	  state: "Gujarat",
-	  value: {
-		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		Labs: { Pathology: 60, Radiology: 50, Biochemistry: 40, Microbiology: 30 },
-		Hospitals: { Government: 20, Private: 10, Multispecialty: 5, "Children's": 3 },
-	  },
+		id: "GA",
+		state: "Goa",
+		value: {
+			Doctors: {
+				"General Physician": 10,
+				Cardiologist: 5,
+				Dermatologist: 5,
+				Dentist: 5,
+			},
+			Labs: { Pathology: 10, Radiology: 8, Biochemistry: 7, Microbiology: 5 },
+			Hospitals: {
+				Government: 3,
+				Private: 2,
+				Multispecialty: 1,
+				"Children's": 1,
+			},
+		},
 	},
 	{
-	  id: "HR",
-	  state: "Haryana",
-	  value: {
-		Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 10, Dentist: 10 },
-		Labs: { Pathology: 30, Radiology: 25, Biochemistry: 20, Microbiology: 15 },
-		Hospitals: { Government: 10, Private: 7, Multispecialty: 2, "Children's": 1 },
-	  },
+		id: "GJ",
+		state: "Gujarat",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 60,
+				Radiology: 50,
+				Biochemistry: 40,
+				Microbiology: 30,
+			},
+			Hospitals: {
+				Government: 20,
+				Private: 10,
+				Multispecialty: 5,
+				"Children's": 3,
+			},
+		},
 	},
 	{
-	  id: "HP",
-	  state: "Himachal Pradesh",
-	  value: {
-		Doctors: { "General Physician": 15, Cardiologist: 8, Dermatologist: 5, Dentist: 2 },
-		Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 5 },
-		Hospitals: { Government: 5, Private: 3, Multispecialty: 1, "Children's": 1 },
-	  },
+		id: "HR",
+		state: "Haryana",
+		value: {
+			Doctors: {
+				"General Physician": 30,
+				Cardiologist: 20,
+				Dermatologist: 10,
+				Dentist: 10,
+			},
+			Labs: {
+				Pathology: 30,
+				Radiology: 25,
+				Biochemistry: 20,
+				Microbiology: 15,
+			},
+			Hospitals: {
+				Government: 10,
+				Private: 7,
+				Multispecialty: 2,
+				"Children's": 1,
+			},
+		},
 	},
 	{
-	  id: "JH",
-	  state: "Jharkhand",
-	  value: {
-		Doctors: { "General Physician": 18, Cardiologist: 10, Dermatologist: 5, Dentist: 2 },
-		Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 10 },
-		Hospitals: { Government: 10, Private: 3, Multispecialty: 1, "Children's": 1 },
-	  },
+		id: "HP",
+		state: "Himachal Pradesh",
+		value: {
+			Doctors: {
+				"General Physician": 15,
+				Cardiologist: 8,
+				Dermatologist: 5,
+				Dentist: 2,
+			},
+			Labs: { Pathology: 20, Radiology: 15, Biochemistry: 10, Microbiology: 5 },
+			Hospitals: {
+				Government: 5,
+				Private: 3,
+				Multispecialty: 1,
+				"Children's": 1,
+			},
+		},
 	},
 	{
-	  id: "KA",
-	  state: "Karnataka",
-	  value: {
-		Doctors: { "General Physician": 30, Cardiologist: 20, Dermatologist: 15, Dentist: 12 },
-		Labs: { Pathology: 50, Radiology: 40, Biochemistry: 30, Microbiology: 20 },
-		Hospitals: { Government: 10, Private: 10, Multispecialty: 5, "Children's": 2 },
-	  },
+		id: "JH",
+		state: "Jharkhand",
+		value: {
+			Doctors: {
+				"General Physician": 18,
+				Cardiologist: 10,
+				Dermatologist: 5,
+				Dentist: 2,
+			},
+			Labs: {
+				Pathology: 20,
+				Radiology: 15,
+				Biochemistry: 10,
+				Microbiology: 10,
+			},
+			Hospitals: {
+				Government: 10,
+				Private: 3,
+				Multispecialty: 1,
+				"Children's": 1,
+			},
+		},
 	},
 	{
-	  id: "KL",
-	  state: "Kerala",
-	  value: {
-		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15 },
-		Labs: { Pathology: 60, Radiology: 50, Biochemistry: 40, Microbiology: 30 },
-		Hospitals: { Government: 15, Private: 10, Multispecialty: 5, "Children's": 3 },
-	  },
+		id: "KA",
+		state: "Karnataka",
+		value: {
+			Doctors: {
+				"General Physician": 30,
+				Cardiologist: 20,
+				Dermatologist: 15,
+				Dentist: 12,
+			},
+			Labs: {
+				Pathology: 50,
+				Radiology: 40,
+				Biochemistry: 30,
+				Microbiology: 20,
+			},
+			Hospitals: {
+				Government: 10,
+				Private: 10,
+				Multispecialty: 5,
+				"Children's": 2,
+			},
+		},
+	},
+	{
+		id: "KL",
+		state: "Kerala",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+			},
+			Labs: {
+				Pathology: 60,
+				Radiology: 50,
+				Biochemistry: 40,
+				Microbiology: 30,
+			},
+			Hospitals: {
+				Government: 15,
+				Private: 10,
+				Multispecialty: 5,
+				"Children's": 3,
+			},
+		},
 	},
 	{
 		id: "MP",
 		state: "Madhya Pradesh",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15 },
-		  Labs: { Pathology: 60, Radiology: 50, Biochemistry: 40, Microbiology: 30 },
-		  Hospitals: { Government: 15, Private: 10, Multispecialty: 5, "Children's": 3 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+			},
+			Labs: {
+				Pathology: 60,
+				Radiology: 50,
+				Biochemistry: 40,
+				Microbiology: 30,
+			},
+			Hospitals: {
+				Government: 15,
+				Private: 10,
+				Multispecialty: 5,
+				"Children's": 3,
+			},
 		},
 	},
 	{
-	  id: "MH",
-	  state: "Maharashtra",
-	  value: {
-		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
-		Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
-	  },
+		id: "MH",
+		state: "Maharashtra",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 80,
+				Radiology: 70,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 30,
+				Private: 20,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
+		},
 	},
 	{
 		id: "MN",
 		state: "Manipur",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 80,
+				Radiology: 70,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 30,
+				Private: 20,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
 	},
 	{
 		id: "ML",
 		state: "Meghalaya",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 80, Radiology: 70, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 30, Private: 20, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 80,
+				Radiology: 70,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 30,
+				Private: 20,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
 	},
 	{
-	  id: "MZ",
-	  state: "Mizoram",
-	  value: {
-		Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
-	  },
+		id: "MZ",
+		state: "Mizoram",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
+		},
 	},
 	{
 		id: "NL",
 		state: "Nagaland",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "OR",
 		state: "Odisha",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "PB",
 		state: "Punjab",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "RJ",
 		state: "Rajasthan",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "SK",
 		state: "Sikkim",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "TN",
 		state: "Tamil Nadu",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "TR",
 		state: "Tripura",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "UP",
 		state: "Uttar Pradesh",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "UT",
 		state: "Uttarakhand",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "WB",
 		state: "West Bengal",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "DL",
 		state: "Delhi",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "JK",
 		state: "Jammu and Kashmir",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "LD",
 		state: "Lakshadweep",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "PY",
 		state: "Puducherry",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "AN",
 		state: "Andaman & Nicobar",
 		value: {
-		  Doctors: { "General Physician": 35, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 35,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "CH",
 		state: "Chandigarh",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	  {
+	},
+	{
 		id: "DN",
 		state: "Dadra & Nagar Haveli and Daman & Diu",
 		value: {
-		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
-		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
-		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
 		},
-	  },
-	// Add remaining states and union territories with similar structure
-  ];
-  
-
+	},
+	{
+		id: "OD",
+		state: "Odisha",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
+		},
+	},
+	{
+		id: "CT",
+		state: "Chhattisgarh",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
+		},
+	},
+	{
+		id: "UK",
+		state: "Uttarakhand",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
+		},
+	},
+	{
+		id: "TS",
+		state: "Telangana",
+		value: {
+			Doctors: {
+				"General Physician": 40,
+				Cardiologist: 25,
+				Dermatologist: 20,
+				Dentist: 15,
+				"ENT Specialist": 87,
+				Ophthalmologist: 2,
+				Gynaecologist: 23,
+			},
+			Labs: {
+				Pathology: 100,
+				Radiology: 80,
+				Biochemistry: 60,
+				Microbiology: 50,
+			},
+			Hospitals: {
+				Government: 25,
+				Private: 15,
+				Multispecialty: 10,
+				"Children's": 5,
+			},
+		},
+	},
+];
 
 const App = () => {
 	const [data] = useState(getHeatMapData());
@@ -371,6 +1047,7 @@ const App = () => {
 	const endIndex = startIndex + cardsPerPage;
 
 	const handleStateClick = (geo) => {
+		console.log("geo", geo);
 		const current = data.find((state) => state.id === geo.id);
 		if (current) {
 			setActiveState(current);
@@ -409,9 +1086,7 @@ const App = () => {
 		<div className="bg-gray-100 mt-[90px] min-h-screen flex flex-col justify-between">
 			<div className="py-6">
 				<div className="container mx-auto text-center">
-					<h1 className="text-4xl font-bold text-black">
-						Our Partners
-					</h1>
+					<h1 className="text-4xl font-bold text-black">Our Partners</h1>
 				</div>
 			</div>
 
@@ -468,7 +1143,15 @@ const App = () => {
 				{/* Cards Section */}
 				<div className="flex flex-col-reverse md:flex-row gap-4 md:gap-8">
 					<div className="md:w-4/5 w-full md:mb-8 mx-auto">
-						<div className="grid grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-2 lg:gap-6">
+						
+						<div className="grid grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-2 lg:gap-6 relative">
+						<Image
+							src="/images/Coming_Soon.png"
+							width={500}
+							height={500}
+							alt="India Map"
+							className="coming-soon-partners"
+						/>
 							{Object.entries(subcategories)
 								.flatMap(([category, count]) =>
 									Array(count)
@@ -514,83 +1197,91 @@ const App = () => {
 						</div>
 
 						{/* Pagination */}
-					<div className="my-12 flex justify-center items-center space-x-2">
-					<button
-						onClick={handlePrevPage}
-						disabled={currentPage === 1}
-						className={`px-4 py-2 rounded-full ${
-						currentPage === 1 ? "bg-gray-300 text-gray-500" : "bg-blue-500 text-white"
-						}`}
-					>
-						&lt;
-					</button>
-					<div className="flex space-x-2 w-max overflow-x-auto">
-						{/* First Page */}
-						<button
-						onClick={() => setCurrentPage(1)}
-						className={`px-4 py-2 rounded-full ${
-							currentPage === 1 ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
-						}`}
-						>
-						1
-						</button>
-
-						{/* Dots before current page if needed */}
-						{currentPage > 3 && (
-						<span className="px-2 py-1 text-gray-500">...</span>
-						)}
-
-						{/* Current page and its neighbors */}
-						{Array.from({ length: totalPages }, (_, i) => i + 1)
-						.filter(
-							(page) =>
-							  page !== 1 && page !== totalPages && // Exclude first and last pages
-							  (page === currentPage || page === currentPage - 1 || page === currentPage + 1)
-						)
-						.map((page) => (
+						<div className="my-12 flex justify-center items-center space-x-2">
 							<button
-							key={page}
-							onClick={() => setCurrentPage(page)}
-							className={`px-4 py-2 rounded-full ${
-								currentPage === page ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
-							}`}
+								onClick={handlePrevPage}
+								disabled={currentPage === 1}
+								className={`px-4 py-2 rounded-full ${
+									currentPage === 1
+										? "bg-gray-300 text-gray-500"
+										: "bg-blue-500 text-white"
+								}`}
 							>
-							{page}
+								&lt;
 							</button>
-						))}
+							<div className="flex space-x-2 w-max overflow-x-auto">
+								{/* First Page */}
+								<button
+									onClick={() => setCurrentPage(1)}
+									className={`px-4 py-2 rounded-full ${
+										currentPage === 1
+											? "bg-blue-500 text-white"
+											: "bg-gray-200 text-gray-700"
+									}`}
+								>
+									1
+								</button>
 
-						{/* Dots after current page if needed */}
-						{currentPage < totalPages - 2 && (
-						<span className="px-2 py-1 text-gray-500">...</span>
-						)}
+								{/* Dots before current page if needed */}
+								{currentPage > 3 && (
+									<span className="px-2 py-1 text-gray-500">...</span>
+								)}
 
-						{/* Last Page */}
-						{totalPages > 1 && (
-						<button
-							onClick={() => setCurrentPage(totalPages)}
-							className={`px-4 py-2 rounded-full ${
-							currentPage === totalPages
-								? "bg-blue-500 text-white"
-								: "bg-gray-200 text-gray-700"
-							}`}
-						>
-							{totalPages}
-						</button>
-						)}
-					</div>
-					<button
-						onClick={handleNextPage}
-						disabled={currentPage === totalPages}
-						className={`px-4 py-2 rounded-full ${
-						currentPage === totalPages
-							? "bg-gray-300 text-gray-500"
-							: "bg-blue-500 text-white"
-						}`}
-					>
-						&gt;
-					</button>
-					</div>
+								{/* Current page and its neighbors */}
+								{Array.from({ length: totalPages }, (_, i) => i + 1)
+									.filter(
+										(page) =>
+											page !== 1 &&
+											page !== totalPages && // Exclude first and last pages
+											(page === currentPage ||
+												page === currentPage - 1 ||
+												page === currentPage + 1)
+									)
+									.map((page) => (
+										<button
+											key={page}
+											onClick={() => setCurrentPage(page)}
+											className={`px-4 py-2 rounded-full ${
+												currentPage === page
+													? "bg-blue-500 text-white"
+													: "bg-gray-200 text-gray-700"
+											}`}
+										>
+											{page}
+										</button>
+									))}
 
+								{/* Dots after current page if needed */}
+								{currentPage < totalPages - 2 && (
+									<span className="px-2 py-1 text-gray-500">...</span>
+								)}
+
+								{/* Last Page */}
+								{totalPages > 1 && (
+									<button
+										onClick={() => setCurrentPage(totalPages)}
+										className={`px-4 py-2 rounded-full ${
+											currentPage === totalPages
+												? "bg-blue-500 text-white"
+												: "bg-gray-200 text-gray-700"
+										}`}
+									>
+										{totalPages}
+									</button>
+								)}
+							</div>
+							<button
+								onClick={handleNextPage}
+								disabled={currentPage === totalPages}
+								className={`px-4 py-2 rounded-full ${
+									currentPage === totalPages
+										? "bg-gray-300 text-gray-500"
+										: "bg-blue-500 text-white"
+								}`}
+							>
+								&gt;
+							</button>
+						</div>
 					</div>
 
 					{/* Map Section */}
@@ -625,7 +1316,6 @@ const App = () => {
 							</Geographies>
 						</ComposableMap>
 					</div>
-
 				</div>
 			</div>
 		</div>
