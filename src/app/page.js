@@ -39,7 +39,10 @@ export default function Home() {
 						variants={fadeInText}
 					>
 						<div className="text-sm font-medium text-gray-600 mb-4">
-						⭐India&apos;s 1st Centralised EHR Platform -----
+							<span className="text-[yellow]">★★★</span> India&apos;s 1st
+							Centralised EHR Platform{" "}
+							<span className="text-[yellow]">★★★</span>
+							{/* &#10024; &#x2728; */}
 						</div>
 						<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">
 							Revolutionising{" "}
@@ -181,7 +184,7 @@ export default function Home() {
 			</div>
 
 			{/* Why Us Section */}
-			<div className="bg-white py-6 md:py-12 px-4 md:px-8 sticky h-screen z-[-1] top-[90px]">
+			<div className="bg-white py-2 md:py-4 px-4 md:px-8 sticky h-screen z-[-1] top-[90px]">
 				<WhyUs />
 			</div>
 
