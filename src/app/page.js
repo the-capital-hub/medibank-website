@@ -39,7 +39,7 @@ export default function Home() {
 						variants={fadeInText}
 					>
 						<div className="text-sm font-medium text-gray-600 mb-4">
-							----- India&apos;s 1st Centralised EHR Platform -----
+						⭐India&apos;s 1st Centralised EHR Platform -----
 						</div>
 						<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">
 							Revolutionising{" "}

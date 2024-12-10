@@ -162,7 +162,7 @@ export default function WhyUs() {
 					))}
 				</motion.div>
 			</div>
-			<motion.div
+			{/* <motion.div
 				className="text-center my-1"
 				variants={buttonVariants}
 				initial="hidden"
@@ -175,7 +175,7 @@ export default function WhyUs() {
 				>
 					View All
 				</a>
-			</motion.div>
+			</motion.div> */}
 		</div>
 	);
 }
