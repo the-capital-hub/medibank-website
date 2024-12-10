@@ -46,7 +46,7 @@ export default function page() {
 					</a>
 				</div>
 			</div>
-			<div className="bg-white text-black py-10 px-16">
+			<div id="resources2" className="bg-white text-black py-10 px-16">
 				<div className=" flex flex-col flex-nowrap sm:py-[40px] md:flex-row rounded-[30px] justify-center items-center ">
 					<div className="text-[12px] md:text-[16px] md:w-1/2 m-auto w-full text-justify">
 						<div className="text-left text-2xl sm:text-[48px] font-semibold py-4 sm:py-7">
