@@ -161,27 +161,27 @@ export default function Footer() {
 						<h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
 						<ul className="p-0 m-0 list-none flex flex-col md:flex-col ">
 							<li className="m-0 p-0">
-							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+							<Link href="/health-guides" className="text-white hover:text-[#5C4AFF]">
 								Health Guides
 							</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+							<Link href="/privacy-policy" className="text-white hover:text-[#5C4AFF]">
 								Privacy Policy
 							</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+							<Link href="/about#about4" className="text-white hover:text-[#5C4AFF]">
 								Contact Us
 							</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+							<Link href="/about" className="text-white hover:text-[#5C4AFF]">
 								About Us
 							</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="#" className="text-white hover:text-[#5C4AFF]">
+							<Link href="/blog" className="text-white hover:text-[#5C4AFF]">
 								Blog
 							</Link>
 							</li>

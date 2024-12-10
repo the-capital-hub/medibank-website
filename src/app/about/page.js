@@ -110,7 +110,7 @@ export default function Page() {
 				</div>
 				<div className="md:container flex justify-center w-full md:w-1/2">
 					<Image
-						src="/images/ourstory.png"
+						src="/images/OurStoryTiled.png"
 						width={500}
 						height={200}
 						alt="Our Story"

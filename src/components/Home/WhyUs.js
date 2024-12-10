@@ -102,7 +102,7 @@ export default function WhyUs() {
 			<div className="flex py-6 justify-between items-center mxxxl:container w-[90%] m-auto xl:container">
 				{/* Other Blogs */}
 				<motion.div
-					className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-10 w-full justify-center"
+					className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4 w-full justify-center"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: false, amount: 0.3 }}
@@ -162,7 +162,7 @@ export default function WhyUs() {
 					))}
 				</motion.div>
 			</div>
-			<motion.div
+			{/* <motion.div
 				className="text-center my-1"
 				variants={buttonVariants}
 				initial="hidden"
@@ -175,7 +175,7 @@ export default function WhyUs() {
 				>
 					View All
 				</a>
-			</motion.div>
+			</motion.div> */}
 		</div>
 	);
 }

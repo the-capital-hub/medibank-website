@@ -100,3 +100,33 @@ ol {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
+
+.comming-soon {
+	width: 450px;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 282px);
+	transform: rotate(45deg);
+	transform-origin: top center;
+	animation: rotate-img 10s ease-in-out infinite;
+}
+
+.coming-soon-partners {
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@keyframes rotate-img {
+	0% {
+		transform: rotate(-40deg);
+	}
+	50% {
+		transform: rotate(40deg);
+	}
+	100% {
+		transform: rotate(-40deg);
+	}
+}
