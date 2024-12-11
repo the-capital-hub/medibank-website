@@ -52,7 +52,7 @@ export default function ChemistryAtWorkSection() {
 			<div className="md:w-1/2 w-full md:px-10 m-auto">
 				<div className="relative">
 					<Image
-						src="/images/addingvalue.png"
+						src="/images/doctorNew.png"
 						className="rounded-lg"
 						alt="About MediBank section"
 						width={640}

@@ -191,7 +191,7 @@ export default function page() {
 						<div className="max-w-lg mx-auto py-6 text-blue-500 text-center">
 							Doctors who are not registerd with us and want to come onboard
 							please contact us on{" "}
-							<a href="mailto:support@medilog.in">support@medilog.in</a> to go
+							<a href="mailto:support@medibank.in">support@medibank.in</a> to go
 							through the onboarding process.
 						</div>
 					</div>
