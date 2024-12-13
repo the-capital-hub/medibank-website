@@ -4,7 +4,23 @@ export default function page() {
 	return (
 		<div className="mt-[100px] bg-blue-50">
 			<div className="w-full md:w-4/5 container pb-16 relative">
-				
+
+				<Image
+					src="/images/login/Coming_soon_stamp.png"
+					className="m-auto block md:hidden absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-full"
+					width="200"
+					height="200"
+					alt="coming soon"
+				/>
+				<Image
+					src="/images/login/Coming_soon_stamp.png"
+					className="m-auto block md:hidden absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-full"
+					width="200"
+					height="200"
+					alt="coming soon"
+				/>
+
+
 				<Image
 					src="/images/login/Coming soon_boardhang.png"
 					className="m-auto hidden md:block comming-soon"
