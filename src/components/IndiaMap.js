@@ -77,23 +77,40 @@ const getHeatMapData = () => [
 		},
 	},
 	{
-		id: "AR",
-		state: "Arunachal Pradesh",
+		id: "CT",
+		state: "Chhattisgarh",
 		value: {
-			Doctors: {
-				"General Physician": 5,
-				Cardiologist: 3,
-				Dermatologist: 1,
-				Dentist: 1,
-			},
-			Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
-			Hospitals: {
-				Government: 2,
-				Private: 1,
-				Multispecialty: 0,
-				"Children's": 0,
-			},
+		  Doctors: { "General Physician": 5, Cardiologist: 3, Dermatologist: 1, Dentist: 1 },
+		  Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
+		  Hospitals: { Government: 2, Private: 1, Multispecialty: 0, "Children's": 0 },
 		},
+	  },
+	  {
+		id: "OD",
+		state: "Odisha",
+		value: {
+		  Doctors: { "General Physician": 5, Cardiologist: 3, Dermatologist: 1, Dentist: 1 },
+		  Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
+		  Hospitals: { Government: 2, Private: 1, Multispecialty: 0, "Children's": 0 },
+		},
+	  },
+	  {
+		id: "TS",
+		state: "Telangana",
+		value: {
+		  Doctors: { "General Physician": 5, Cardiologist: 3, Dermatologist: 1, Dentist: 1 },
+		  Labs: { Pathology: 5, Radiology: 4, Biochemistry: 3, Microbiology: 3 },
+		  Hospitals: { Government: 2, Private: 1, Multispecialty: 0, "Children's": 0 },
+		},
+	  },
+	{
+	  id: "AS",
+	  state: "Assam",
+	  value: {
+		Doctors: { "General Physician": 25, Cardiologist: 15, Dermatologist: 10, Dentist: 10 },
+		Labs: { Pathology: 25, Radiology: 20, Biochemistry: 15, Microbiology: 10 },
+		Hospitals: { Government: 10, Private: 5, Multispecialty: 2, "Children's": 1 },
+	  },
 	},
 	{
 		id: "AS",
@@ -886,8 +903,17 @@ const getHeatMapData = () => [
 				"Children's": 5,
 			},
 		},
-	},
-	{
+	  },
+	  {
+		id: "UK",
+		state: "Uttrakhand",
+		value: {
+		  Doctors: { "General Physician": 40, Cardiologist: 25, Dermatologist: 20, Dentist: 15,  "ENT Specialist": 87, Ophthalmologist: 2, Gynaecologist: 23 },
+		  Labs: { Pathology: 100, Radiology: 80, Biochemistry: 60, Microbiology: 50 },
+		  Hospitals: { Government: 25, Private: 15, Multispecialty: 10, "Children's": 5 },
+		},
+	  },
+	  {
 		id: "DN",
 		state: "Dadra & Nagar Haveli and Daman & Diu",
 		value: {

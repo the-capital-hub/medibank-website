@@ -4,6 +4,7 @@ export default function page() {
 	return (
 		<div className="mt-[100px] bg-blue-50">
 			<div className="w-full md:w-4/5 container pb-16 relative">
+
 				<Image
 					src="/images/login/Coming_soon_stamp.png"
 					className="m-auto block md:hidden absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-full"
@@ -18,6 +19,8 @@ export default function page() {
 					height="200"
 					alt="coming soon"
 				/>
+
+
 				<Image
 					src="/images/login/Coming soon_boardhang.png"
 					className="m-auto hidden md:block comming-soon"
@@ -27,6 +30,13 @@ export default function page() {
 				/>
 				{/* <div className='text-green-400'>LOGIN</div> */}
 				<div className="flex flex-col md:flex-row justify-between w-full h-auto">
+					<Image
+						src="/images/login/Coming_soon_stamp.png"
+						className="m-auto block md:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						width="200"
+						height="200"
+						alt="coming soon"
+					/>
 					<div className="">
 						<div className="py-2 text-blue-400 font-medium">
 							INDIVIDUAL USER
@@ -42,19 +52,23 @@ export default function page() {
 									<div className="mb-6">
 										<label className="block mb-2 font-extrabold">Email</label>
 										<input
-											className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
-											type="email"
-											placeholder="email"
+										className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded cursor-not-allowed"
+										type="email"
+										placeholder="email"
+										disabled
+										aria-disabled="true"
 										/>
 									</div>
 									<div className="mb-6">
-										<label className="block mb-2 font-extrabold">
+										<label className="block mb-2 font-extrabold ">
 											Password
 										</label>
 										<input
-											className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+											className="inline-block cursor-not-allowed w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
 											type="password"
 											placeholder="**********"
+											disabled
+											aria-disabled="true"
 										/>
 									</div>
 									<div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">
@@ -150,11 +164,13 @@ export default function page() {
 										</label>
 									</div>
 									<div className="mb-6">
-										<label className="block mb-2 font-extrabold">Email</label>
+										<label className="block mb-2 font-extrabold ">Email</label>
 										<input
-											className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+											className="inline-block cursor-not-allowed w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
 											type="email"
 											placeholder="email"
+											disabled
+  											aria-disabled="true"
 										/>
 									</div>
 									<div className="mb-6">
@@ -162,9 +178,11 @@ export default function page() {
 											Password
 										</label>
 										<input
-											className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
+											className="inline-block cursor-not-allowed w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded"
 											type="password"
 											placeholder="**********"
+											disabled
+  											aria-disabled="true"
 										/>
 									</div>
 									<div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">
@@ -198,7 +216,7 @@ export default function page() {
 						<div className="max-w-lg mx-auto py-6 text-blue-500 text-center">
 							Doctors who are not registerd with us and want to come onboard
 							please contact us on{" "}
-							<a href="mailto:support@medilog.in">support@medilog.in</a> to go
+							<a href="mailto:support@medibank.in">support@medibank.in</a> to go
 							through the onboarding process.
 						</div>
 					</div>
