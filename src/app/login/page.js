@@ -30,13 +30,13 @@ export default function page() {
 				/>
 				{/* <div className='text-green-400'>LOGIN</div> */}
 				<div className="flex flex-col md:flex-row justify-between w-full h-auto">
-					<Image
+					{/* <Image
 						src="/images/login/Coming_soon_stamp.png"
 						className="m-auto block md:hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 						width="200"
 						height="200"
 						alt="coming soon"
-					/>
+					/> */}
 					<div className="">
 						<div className="py-2 text-blue-400 font-medium">
 							INDIVIDUAL USER
