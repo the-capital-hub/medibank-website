@@ -15,7 +15,7 @@ export default function Page() {
 			Name: "Yogendra Shukla",
 			Designation: "CTO & Co-Founder",
 			Details:
-				"Yogi is a Technology Evangelist with 28 years of progressive leadership experience across Technology, People, Sales & Business Management in diverse global roles of multinational organisations. As the CTO of Medibank, He is driving technological innovation & its execution in healthcare with India’s first patient-centric electronic health record platform.",
+				"Yogi is a Technology Evangelist with 28 years of progressive leadership experience across Technology, People, Sales & Business Management in diverse global roles of multinational organisations. He has keen interest in medicine & mediTech domains which he keeps abreast via his network of medical practitioners & domain experts in the field of medicine. As the CTO of Medibank, He is driving technological innovation & its execution in healthcare with India’s first patient-centric electronic health record platform.",
 			imgurl: "/images/founders/Yogi.png",
 		},
 	];
