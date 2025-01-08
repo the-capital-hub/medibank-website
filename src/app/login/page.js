@@ -4,27 +4,27 @@ export default function page() {
 	return (
 		<div className="mt-[100px] bg-blue-50">
 			<div className="w-full md:w-4/5 container pb-16 relative">
-				<Image
+				{/* <Image
 					src="/images/login/Coming_soon_stamp.png"
 					className="m-auto block md:hidden absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-full"
 					width="200"
 					height="200"
 					alt="coming soon"
-				/>
-				<Image
+				/> */}
+				{/* <Image
 					src="/images/login/Coming_soon_stamp.png"
 					className="m-auto block md:hidden absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-full"
 					width="200"
 					height="200"
 					alt="coming soon"
-				/>
-				<Image
+				/> */}
+				{/* <Image
 					src="/images/login/Coming soon_boardhang.png"
 					className="m-auto hidden md:block comming-soon"
 					width="200"
 					height="200"
 					alt="coming soon"
-				/>
+				/> */}
 				{/* <div className='text-green-400'>LOGIN</div> */}
 				<div className="flex flex-col md:flex-row justify-between w-full h-auto">
 					<div className="">
@@ -37,6 +37,9 @@ export default function page() {
 									<h2 className="text-3xl md:text-4xl font-extrabold">
 										Sign in
 									</h2>
+									<p className="font-extrabold text-transparent bg-gradient-to-r from-purple-500 to-blue-700 bg-clip-text">
+										(Coming Soon Should be used as Beta Version Access)
+									</p>
 								</div>
 								<form action="">
 									<div className="mb-6">
@@ -137,6 +140,9 @@ export default function page() {
 									<h2 className="text-3xl md:text-4xl font-extrabold">
 										Sign in
 									</h2>
+									<p className="font-extrabold text-transparent bg-gradient-to-r from-purple-500 to-blue-700 bg-clip-text">
+										(Coming Soon Should be used as Beta Version Access)
+									</p>
 								</div>
 								<form action="">
 									<div className="mb-6">
