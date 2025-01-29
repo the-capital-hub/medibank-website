@@ -51,7 +51,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center py-8 w-full">
+    <div className="flex flex-col items-center justify-center w-full">
       <h1 className="text-center text-[28px] md:text-[48px] font-bold mb-8">Get in Touch!</h1>
       <form
         ref={form}
