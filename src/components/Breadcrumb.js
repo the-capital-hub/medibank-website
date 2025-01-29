@@ -8,7 +8,7 @@ const Breadcrumb = ({ items, textColor }) => {
 					<li key={index} className="inline-flex items-center">
 						{index > 0 && <span className="mx-2 text-gray-400">/</span>}
 						<a
-							href={item.href}
+							href={`${item.href}.html`}
 							className={`text-sm md:text-[28px] font-medium ${
 								textColor ? textColor : "text-blue-600"
 							} hover:text-blue-500`}
