@@ -84,7 +84,7 @@ export default function Page() {
 			{/* Our Story */}
 			<div
 				id="about1"
-				className="mx-10 md:mx-16 h-max md:h-screen flex flex-col md:flex-row items-center mb-8 md:mb-0"
+				className="mx-10 md:mx-16 h-max flex flex-col md:flex-row items-center mb-8 md:mb-0 md:pt-[88px]"
 			>
 				<div className="md:container text-left text-[22px] pt-28 md:pt-16 w-full md:w-1/2">
 					<h2 className="font-bold">Our Story</h2>
@@ -120,7 +120,7 @@ export default function Page() {
 			</div>
 
 			{/* Founding Team */}
-			<div className="bg-white">
+			<div className="bg-white md:pt-[88px]" id="about2">
 				<h2 className="container text-center text-[28px] md:text-[30px] mb-8 md:mb-0 font-bold pt-0">
 					Founding Team
 				</h2>
@@ -167,7 +167,7 @@ export default function Page() {
 
 			{/* Advisory Panel */}
 			<div className="bg-white">
-				<div className="w-4/5 container py-16">
+				<div className="w-4/5 container py-16 pb-0">
 					<div className="text-center my-8 lg:my-6 text-[28px] md:text-[38px] font-bold text-black">
 						Advisory Panel
 					</div>
@@ -209,7 +209,7 @@ export default function Page() {
 			</div>
 
 			{/* Careers */}
-			<div id="about3" className="bg-white">
+			<div id="about3" className="bg-white md:pt-[88px]">
 				<div className="text-center text-[28px] md:text-[48px] font-bold">
 					Careers
 				</div>
@@ -227,7 +227,7 @@ export default function Page() {
 			</div>
 
 			{/* Contact Us */}
-			<div id="about4" className="bg-white">
+			<div id="about4" className="bg-white md:pt-[88px]">
 				<div className="rounded-[10px] sticky top-[100px] m-auto w-full">
 					<div className="flex flex-col-reverse md:flex-row justify-center items-center">
 						<div className="w-full text-center md:text-left">
