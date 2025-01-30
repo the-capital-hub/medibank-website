@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
@@ -8,36 +9,59 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 		register,
 		handleSubmit,
 		formState: { errors },
-		watch,
 		reset,
 	} = useForm();
 
-	const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
-	const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-	const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
-
-	// console.log(publicKey, serviceId, templateId);
+	const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState(null);
 
 	const onSubmit = async (data) => {
-		console.log("Data", data);
+		setIsLoading(true);
+		setError(null);
+
 		try {
-			const response = await emailjs.send(
-				serviceId,
-				templateId,
+			const response = await fetch("/api/signup", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (!response.ok) {
+				throw new Error("Failed to process signup");
+			}
+
+			// Send confirmation email after successful signup
+			await sendConfirmationEmail(data);
+
+			reset();
+			setIsOpen(false);
+			setShowSuccessPopup(true);
+		} catch (error) {
+			console.error("Error during submission:", error);
+			setError(error.message || "Failed to process signup");
+		} finally {
+			setIsLoading(false);
+		}
+	};
+
+	const sendConfirmationEmail = async (userData) => {
+		try {
+			await emailjs.send(
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
 				{
-					to_email: data.email,
+					to_email: userData.email,
 					from_name: "Team Medibank",
-					to_name: `${data.firstName} ${data.lastName}`,
+					to_name: `${userData.firstName} ${userData.lastName}`,
 					message: "Thank you for signing up!",
 				},
-				publicKey
+				{
+					publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+				}
 			);
-
-			if (response.status === 200) {
-				console.log("Email sent successfully", response);
-				reset();
-				setIsOpen(false);
-			}
 		} catch (error) {
 			console.error("Error sending email:", error);
 		}
@@ -46,7 +70,12 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 	const handleClose = () => {
 		reset();
 		setIsOpen(false);
+		setError(null);
 	};
+
+	if (error) {
+		return <div className="text-red-500 p-4">{error}</div>;
+	}
 
 	return (
 		<div>
@@ -199,9 +228,36 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 							<div className="flex items-center justify-between">
 								<button
 									type="submit"
-									className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+									className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center"
+									disabled={isLoading}
 								>
-									Join
+									{isLoading ? (
+										<>
+											<svg
+												className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+											>
+												<circle
+													className="opacity-25"
+													cx="12"
+													cy="12"
+													r="10"
+													stroke="currentColor"
+													strokeWidth="4"
+												></circle>
+												<path
+													className="opacity-75"
+													fill="currentColor"
+													d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+												></path>
+											</svg>
+											Joining...
+										</>
+									) : (
+										"Join"
+									)}
 								</button>
 								<button
 									type="button"
@@ -212,6 +268,22 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 								</button>
 							</div>
 						</form>
+					</div>
+				</div>
+			)}
+			{showSuccessPopup && (
+				<div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center z-50">
+					<div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
+						<h2 className="text-2xl font-bold mb-4 text-green-600">Success!</h2>
+						<p className="mb-4">
+							You successfully joined medibank, Beta Access.
+						</p>
+						<button
+							onClick={() => setShowSuccessPopup(false)}
+							className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						>
+							Close
+						</button>
 					</div>
 				</div>
 			)}
