@@ -21,7 +21,7 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 		setError(null);
 
 		try {
-			const response = await fetch("/api/signup", {
+			const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user/addUserdataToSheet`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
