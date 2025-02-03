@@ -21,13 +21,16 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 		setError(null);
 
 		try {
-			const response = await fetch("/api/signup", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(data),
-			});
+			const response = await fetch(
+				`https://medibank-website-backend.onrender.com/api/user/addUserdataToSheet`,
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(data),
+				}
+			);
 
 			if (!response.ok) {
 				throw new Error("Failed to process signup");
