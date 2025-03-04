@@ -16,7 +16,7 @@ export default function Footer() {
 						height: "100%",
 						backgroundImage: "url('/images/footerframe.png')",
 						backgroundSize: "1000px 1000px",
-						backgroundPosition: "-200px -400px"
+						backgroundPosition: "-200px -400px",
 					}}
 				>
 					<div
@@ -161,34 +161,41 @@ export default function Footer() {
 						<h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
 						<ul className="p-0 m-0 list-none flex flex-col md:flex-col ">
 							<li className="m-0 p-0">
-							<Link href="/health-guides" className="text-white hover:text-[#5C4AFF]">
-								Health Guides
-							</Link>
+								<Link
+									href="/health-guides"
+									className="text-white hover:text-[#5C4AFF]"
+								>
+									Health Guides
+								</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="/privacy-policy" className="text-white hover:text-[#5C4AFF]">
-								Privacy Policy
-							</Link>
+								<Link
+									href="/privacy-policy"
+									className="text-white hover:text-[#5C4AFF]"
+								>
+									Privacy Policy
+								</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="/about#about4" className="text-white hover:text-[#5C4AFF]">
-								Contact Us
-							</Link>
+								<Link
+									href="/about#about4"
+									className="text-white hover:text-[#5C4AFF]"
+								>
+									Contact Us
+								</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="/about" className="text-white hover:text-[#5C4AFF]">
-								About Us
-							</Link>
+								<Link href="/about" className="text-white hover:text-[#5C4AFF]">
+									About Us
+								</Link>
 							</li>
 							<li className="m-0 p-0">
-							<Link href="/blog" className="text-white hover:text-[#5C4AFF]">
-								Blog
-							</Link>
+								<Link href="/blog" className="text-white hover:text-[#5C4AFF]">
+									Blog
+								</Link>
 							</li>
 						</ul>
 					</div>
-
-
 
 					{/* Contact Section */}
 					<div className="w-full md:w-1/4">
@@ -207,6 +214,11 @@ export default function Footer() {
 								>
 									contact@medibank.in
 								</a>
+							</li>
+							<li className="text-white">
+								<span className="font-normal">
+									Charak healthTech Pvt Ltd t/a medibank
+								</span>
 							</li>
 							<li className="sm:hidden text-white">
 								<div className="flex space-x-4 mt-4">
