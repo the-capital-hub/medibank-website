@@ -36,7 +36,6 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 				throw new Error("Failed to process signup");
 			}
 
-			// Send confirmation email after successful signup
 			await sendConfirmationEmail(data);
 
 			reset();
@@ -76,10 +75,6 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 		setError(null);
 	};
 
-	if (error) {
-		return <div className="text-red-500 p-4">{error}</div>;
-	}
-
 	return (
 		<div>
 			{isOpen && (
@@ -91,76 +86,112 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 								(Beta Version)
 							</span>
 						</h2>
+						{error && (
+							<div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+								{error}
+							</div>
+						)}
 						<form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 							<div className="grid grid-cols-2 gap-4">
-								<div>
+								<div className="space-y-1">
 									<label
 										htmlFor="firstName"
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-gray-700 text-sm font-bold"
 									>
-										First Name
+										First Name <span className="text-red-500">*</span>
 									</label>
 									<input
 										id="firstName"
+										placeholder="John"
 										{...register("firstName", {
 											required: "First name is required",
+											minLength: {
+												value: 2,
+												message: "Minimum 2 characters",
+											},
 										})}
-										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+										className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+											errors.firstName ? "border-red-500" : ""
+										}`}
 									/>
 									{errors.firstName && (
-										<p className="text-red-500 text-xs italic">
+										<div className="text-red-500 text-xs">
 											{errors.firstName.message}
-										</p>
+										</div>
 									)}
 								</div>
-								<div>
+								<div className="space-y-1">
 									<label
 										htmlFor="lastName"
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-gray-700 text-sm font-bold"
 									>
-										Last Name
+										Last Name <span className="text-red-500">*</span>
 									</label>
 									<input
 										id="lastName"
+										placeholder="Doe"
 										{...register("lastName", {
 											required: "Last name is required",
+											minLength: {
+												value: 2,
+												message: "Minimum 2 characters",
+											},
 										})}
-										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+										className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+											errors.lastName ? "border-red-500" : ""
+										}`}
 									/>
 									{errors.lastName && (
-										<p className="text-red-500 text-xs italic">
+										<div className="text-red-500 text-xs">
 											{errors.lastName.message}
-										</p>
+										</div>
 									)}
 								</div>
 							</div>
-							<div>
+							<div className="space-y-1">
 								<label
 									htmlFor="mobile"
-									className="block text-gray-700 text-sm font-bold mb-2"
+									className="block text-gray-700 text-sm font-bold"
 								>
-									Mobile
+									Mobile Number <span className="text-red-500">*</span>
 								</label>
 								<input
 									id="mobile"
-									type="tel"
+									type="text"
+									maxLength="10"
 									{...register("mobile", {
 										required: "Mobile number is required",
+										pattern: {
+											value: /^[6-9]\d{9}$/,
+											message: "Please enter valid 10-digit mobile number",
+										},
+										minLength: {
+											value: 10,
+											message: "Mobile number must be 10 digits",
+										},
 									})}
-									className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+									className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+										errors.mobile ? "border-red-500" : ""
+									}`}
+									placeholder="Enter mobile number"
+									onKeyPress={(e) => {
+										if (!/[0-9]/.test(e.key)) {
+											e.preventDefault();
+										}
+									}}
 								/>
 								{errors.mobile && (
-									<p className="text-red-500 text-xs italic">
+									<div className="text-red-500 text-xs">
 										{errors.mobile.message}
-									</p>
+									</div>
 								)}
 							</div>
-							<div>
+							<div className="space-y-1">
 								<label
 									htmlFor="email"
-									className="block text-gray-700 text-sm font-bold mb-2"
+									className="block text-gray-700 text-sm font-bold"
 								>
-									Email
+									Email <span className="text-red-500">*</span>
 								</label>
 								<input
 									id="email"
@@ -168,70 +199,25 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 									{...register("email", {
 										required: "Email is required",
 										pattern: {
-											value: /\S+@\S+\.\S+/,
+											value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
 											message: "Invalid email address",
 										},
 									})}
-									className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+									className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+										errors.email ? "border-red-500" : ""
+									}`}
+									placeholder="example@email.com"
 								/>
 								{errors.email && (
-									<p className="text-red-500 text-xs italic">
+									<div className="text-red-500 text-xs">
 										{errors.email.message}
-									</p>
+									</div>
 								)}
 							</div>
-							{/* <div>
-								<label
-									htmlFor="password"
-									className="block text-gray-700 text-sm font-bold mb-2"
-								>
-									Password
-								</label>
-								<input
-									id="password"
-									type="password"
-									{...register("password", {
-										required: "Password is required",
-										minLength: {
-											value: 8,
-											message: "Password must be at least 8 characters long",
-										},
-									})}
-									className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-								/>
-								{errors.password && (
-									<p className="text-red-500 text-xs italic">
-										{errors.password.message}
-									</p>
-								)}
-							</div>
-							<div>
-								<label
-									htmlFor="confirmPassword"
-									className="block text-gray-700 text-sm font-bold mb-2"
-								>
-									Confirm Password
-								</label>
-								<input
-									id="confirmPassword"
-									type="password"
-									{...register("confirmPassword", {
-										required: "Please confirm your password",
-										validate: (value) =>
-											value === watch("password") || "Passwords do not match",
-									})}
-									className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-								/>
-								{errors.confirmPassword && (
-									<p className="text-red-500 text-xs italic">
-										{errors.confirmPassword.message}
-									</p>
-								)}
-							</div> */}
-							<div className="flex items-center justify-between">
+							<div className="flex items-center justify-between pt-4">
 								<button
 									type="submit"
-									className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center"
+									className="bg-indigo-500 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
 									disabled={isLoading}
 								>
 									{isLoading ? (
@@ -283,7 +269,7 @@ export default function SignupPopup({ isOpen, setIsOpen }) {
 						</p>
 						<button
 							onClick={() => setShowSuccessPopup(false)}
-							className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							className="bg-indigo-500 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 						>
 							Close
 						</button>
