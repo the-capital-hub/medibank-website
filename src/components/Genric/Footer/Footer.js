@@ -217,7 +217,7 @@ export default function Footer() {
 							</li>
 							<li className="text-white">
 								<span className="font-normal">
-									Charak healthTech Pvt Ltd t/a medibank
+									Charak HealthTech Pvt Ltd [CIN: U47413TS2024PTC191919] t/a MediBank
 								</span>
 							</li>
 							<li className="sm:hidden text-white">

@@ -11,8 +11,7 @@ export default function page() {
 						<h2 className="text-2xl font-semibold mb-4">Introduction</h2>
 						<p className="mb-4">
 							Welcome to Medibank. We value your privacy and are committed to
-							protecting your personal information. This Privacy Policy governs
-							how Charak HealthTech Pvt Ltd t/a Medibank, a company duly
+							protecting your personal information. This Privacy Policy governs how  Charak HealthTech Pvt Ltd [CIN: U47413TS2024PTC191919] t/a MediBank, a company duly
 							incorporated under the provisions of the Companies Act, 2013,
 							having its registered office at 4th Floor, Bizness Square, Hitech
 							City Rd, HITEC City, Hyderabad, Telangana 500081, India
