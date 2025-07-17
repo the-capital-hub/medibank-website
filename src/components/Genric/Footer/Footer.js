@@ -215,11 +215,11 @@ export default function Footer() {
 									contact@medibank.in
 								</a>
 							</li>
-							<li className="text-white">
+							{/* <li className="text-white">
 								<span className="font-normal">
 									Charak HealthTech Pvt Ltd [CIN: U47413TS2024PTC191919] t/a MediBank
 								</span>
-							</li>
+							</li> */}
 							<li className="sm:hidden text-white">
 								<div className="flex space-x-4 mt-4">
 									<Link href="https://www.facebook.com">

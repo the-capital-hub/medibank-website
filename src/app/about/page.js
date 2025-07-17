@@ -11,13 +11,13 @@ export default function Page() {
 				"Adi is an Australian expat of Indian origin, with nearly two decades of expertise in Business Development, Risk Management, and operations mainly with Australia’s most prominent banking and financial services organisations. He is renowned for his ability to establish and scale profitable business operations, forging strategic partnerships and streamlining business processes. Now, as the founder and CEO of Medibank, Adi’s goal is to drive innovation in India’s healthcare ecosystem by spearheading the development of the nation’s first patient-centric Electronic Health Record (EHR) platform.",
 			imgurl: "/images/founders/Adi.png",
 		},
-		{
-			Name: "Yogendra Shukla",
-			Designation: "CTO & Co-Founder",
-			Details:
-				"Yogi is a Technology Evangelist with 28 years of progressive leadership experience across Technology, People, Sales & Business Management in diverse global roles of multinational organisations. He has keen interest in medicine & mediTech domains which he keeps abreast via his network of medical practitioners & domain experts in the field of medicine. As the CTO of Medibank, He is driving technological innovation & its execution in healthcare with India’s first patient-centric electronic health record platform.",
-			imgurl: "/images/founders/Yogi.png",
-		},
+		// {
+		// 	Name: "Yogendra Shukla",
+		// 	Designation: "CTO & Co-Founder",
+		// 	Details:
+		// 		"Yogi is a Technology Evangelist with 28 years of progressive leadership experience across Technology, People, Sales & Business Management in diverse global roles of multinational organisations. He has keen interest in medicine & mediTech domains which he keeps abreast via his network of medical practitioners & domain experts in the field of medicine. As the CTO of Medibank, He is driving technological innovation & its execution in healthcare with India’s first patient-centric electronic health record platform.",
+		// 	imgurl: "/images/founders/Yogi.png",
+		// },
 	];
 
 	const advisoryData = [
@@ -166,7 +166,7 @@ export default function Page() {
 			</div>
 
 			{/* Advisory Panel */}
-			<div className="bg-white">
+			{/* <div className="bg-white">
 				<div className="w-4/5 container py-16 pb-0">
 					<div className="text-center my-8 lg:my-6 text-[28px] md:text-[38px] font-bold text-black">
 						Advisory Panel
@@ -191,7 +191,7 @@ export default function Page() {
 										</div>
 										<div className=" absolute rounded-[10px] top-0 bottom-0 w-full h-full backface_hidden rotate-y-180 bg-gradient-to-r from-purple-200 via-purple-100 to-blue-200 border text-black">
 											{" "}
-											{/*backcard */}
+											"Backcard (remove this line when make this section line)"
 											<p className="p-4 text-[13px] leading-[16px]">
 												{item.Details}
 											</p>
@@ -206,7 +206,7 @@ export default function Page() {
 						})}
 					</div>
 				</div>
-			</div>
+			</div> */}
 
 			{/* Careers */}
 			<div id="about3" className="bg-white md:pt-[88px]">
