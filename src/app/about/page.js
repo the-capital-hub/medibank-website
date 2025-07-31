@@ -166,7 +166,7 @@ export default function Page() {
 			</div>
 
 			{/* Advisory Panel */}
-			{/* <div className="bg-white">
+			<div className="bg-white">
 				<div className="w-4/5 container py-16 pb-0">
 					<div className="text-center my-8 lg:my-6 text-[28px] md:text-[38px] font-bold text-black">
 						Advisory Panel
@@ -191,7 +191,7 @@ export default function Page() {
 										</div>
 										<div className=" absolute rounded-[10px] top-0 bottom-0 w-full h-full backface_hidden rotate-y-180 bg-gradient-to-r from-purple-200 via-purple-100 to-blue-200 border text-black">
 											{" "}
-											"Backcard (remove this line when make this section line)"
+											{/* "Backcard (remove this line when make this section line)" */}
 											<p className="p-4 text-[13px] leading-[16px]">
 												{item.Details}
 											</p>
@@ -206,7 +206,7 @@ export default function Page() {
 						})}
 					</div>
 				</div>
-			</div> */}
+			</div>
 
 			{/* Careers */}
 			<div id="about3" className="bg-white md:pt-[88px]">

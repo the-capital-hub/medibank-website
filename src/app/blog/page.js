@@ -29,6 +29,13 @@ export default function page() {
 			source: "appknox",
 			path: "/blog/article4",
 		},
+		{
+			imgurl: "/images/art5Mb1.png",
+			title:
+				"The Future of Healthcare: How EHR can Transform Patient Care in India",
+			source: "appknox",
+			path: "/blog/article5",
+		},
 	];
 
 	const breadcrumbItems = [
